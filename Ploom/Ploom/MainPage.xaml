@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundImageSource="mainFon.png"
+    NavigationPage.HasNavigationBar="False"
     Visual="Material">
 
     <Grid>
@@ -34,13 +35,17 @@
             Padding="40,0"
             Spacing="20">
             <Button
+                x:Name="LoginPageBtn"
                 Padding="0,10"
                 BackgroundColor="#FCC046"
+                Clicked="LoginPageBtn_Clicked"
                 CornerRadius="27"
                 Text="Login" />
             <Button
+                x:Name="RegistrationPageBtn"
                 Padding="0,10"
                 BackgroundColor="#F06B6D"
+                Clicked="RegistrationPageBtn_Clicked"
                 CornerRadius="27"
                 Text="Registration" />
         </StackLayout>

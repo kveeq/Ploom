@@ -14,5 +14,15 @@ namespace Ploom
         {
             InitializeComponent();
         }
+
+        private async void LoginPageBtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
+
+        private void RegistrationPageBtn_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
