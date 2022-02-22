@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("MaterialIcons-Regular.ttf", Alias = "MaterialIconsFont")]
 namespace Ploom
 {
     public partial class App : Application
