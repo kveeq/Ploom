@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Ploom.RegistrationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#8B8DC0"
+    BackgroundImageSource="image.png"
+    NavigationPage.HasNavigationBar="False"
+    Visual="Material">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label
+                Padding="10,20"
+                FontAttributes="None"
+                FontFamily="MaterialIconsFont"
+                FontSize="43"
+                HorizontalOptions="Start"
+                Text="&#xe317;"
+                TextColor="White"
+                VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="BackLbl" Tapped="BackLbl_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Margin="0,0,43,0"
+                FontSize="24"
+                HorizontalOptions="CenterAndExpand"
+                Text="Registration"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <Frame
+            Margin="40,0,40,0"
+            BackgroundColor="White"
+            CornerRadius="20"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout
+                Padding="10,0"
+                Spacing="15"
+                VerticalOptions="CenterAndExpand">
+                <Entry
+                    BackgroundColor="White"
+                    Placeholder="ФИО"
+                    PlaceholderColor="#ACACAC" />
+                <Entry
+                    BackgroundColor="White"
+                    Placeholder="Номер телефона"
+                    PlaceholderColor="#ACACAC" />
+                <Entry
+                    BackgroundColor="White"
+                    Placeholder="E-mail"
+                    PlaceholderColor="#ACACAC" />
+                <Entry
+                    BackgroundColor="White"
+                    Placeholder="Login"
+                    PlaceholderColor="#ACACAC" />
+                <Entry
+                    BackgroundColor="White"
+                    Placeholder="Password"
+                    PlaceholderColor="#ACACAC" />
+            </StackLayout>
+        </Frame>
+        <Button
+            Margin="0,0,0,20"
+            Padding="20,10"
+            BackgroundColor="#33344F"
+            CornerRadius="20"
+            FontSize="18"
+            HorizontalOptions="CenterAndExpand"
+            Text="Registration"
+            TextTransform="None"
+            VerticalOptions="EndAndExpand" />
+    </StackLayout>
+</ContentPage>

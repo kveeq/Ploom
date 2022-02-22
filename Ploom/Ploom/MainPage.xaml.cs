@@ -20,9 +20,9 @@ namespace Ploom
             await Navigation.PushAsync(new LoginPage());
         }
 
-        private void RegistrationPageBtn_Clicked(object sender, EventArgs e)
+        private async void RegistrationPageBtn_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new RegistrationPage());
         }
     }
 }
