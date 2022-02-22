@@ -1,23 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ploom.MainPage"
-             Visual="Material"
-             BackgroundImageSource="mainFon.png">
+<ContentPage
+    x:Class="Ploom.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundImageSource="mainFon.png"
+    Visual="Material">
 
-    <StackLayout>
-        <Label FontFamily="MaterialIconsFont" 
-               Margin="0, 180,0,0"
-               HorizontalOptions="Center" 
-               FontSize="90" TextColor="White" 
-               Text="house">
-        </Label>
-        <Label Text="Furniture Shop" TextColor="White" HorizontalOptions="Center" Margin="0,0,0,140" FontSize="18"/>
-        <Grid Margin="60">
-            <Button Text="Login" BackgroundColor="#FCC046" CornerRadius="27" Margin="0,0,0,50"/>
-            <Button Text="Registration" BackgroundColor="#F06B6D" CornerRadius="27" Margin="0,50,0,0"/>
-        </Grid>
-        <Label Text="За орду, за альянс!" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"/>
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <Label
+            Grid.Row="0"
+            FontFamily="MaterialIconsFont"
+            FontSize="90"
+            HorizontalOptions="CenterAndExpand"
+            Text="house"
+            TextColor="White"
+            VerticalOptions="CenterAndExpand" />
+        <Label
+            Grid.Row="0"
+            Padding="0,0,0,80"
+            FontSize="21"
+            HorizontalOptions="CenterAndExpand"
+            Text="Furniture Shop"
+            TextColor="White"
+            VerticalOptions="EndAndExpand" />
+        <StackLayout
+            Grid.Row="1"
+            Padding="40,0"
+            Spacing="20">
+            <Button
+                BackgroundColor="#FCC046"
+                CornerRadius="27"
+                Text="Login" />
+            <Button
+                BackgroundColor="#F06B6D"
+                CornerRadius="27"
+                Text="Registration" />
+        </StackLayout>
+        <Label
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            Text="За орду, за альянс!"
+            TextColor="White"
+            VerticalOptions="EndAndExpand" />
+    </Grid>
 
 </ContentPage>
