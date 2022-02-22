@@ -7,12 +7,17 @@
 
     <StackLayout>
         <Label FontFamily="MaterialIconsFont" 
+               Margin="0, 180,0,0"
                HorizontalOptions="Center" 
-               FontSize="28" TextColor="White" 
-               Text="&#xe88a;">
+               FontSize="90" TextColor="White" 
+               Text="house">
         </Label>
-        <Button/>
-        <Button/>
+        <Label Text="Furniture Shop" TextColor="White" HorizontalOptions="Center" Margin="0,0,0,140" FontSize="18"/>
+        <Grid Margin="60">
+            <Button Text="Login" BackgroundColor="#FCC046" CornerRadius="27" Margin="0,0,0,50"/>
+            <Button Text="Registration" BackgroundColor="#F06B6D" CornerRadius="27" Margin="0,50,0,0"/>
+        </Grid>
+        <Label Text="За орду, за альянс!" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"/>
     </StackLayout>
 
 </ContentPage>
