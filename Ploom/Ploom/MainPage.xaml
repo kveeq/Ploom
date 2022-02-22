@@ -11,37 +11,42 @@
             <RowDefinition Height="5*" />
             <RowDefinition Height="5*" />
         </Grid.RowDefinitions>
-        <Label
+        <StackLayout
             Grid.Row="0"
-            FontFamily="MaterialIconsFont"
-            FontSize="90"
             HorizontalOptions="CenterAndExpand"
-            Text="house"
-            TextColor="White"
-            VerticalOptions="CenterAndExpand" />
-        <Label
-            Grid.Row="0"
-            Padding="0,0,0,80"
-            FontSize="21"
-            HorizontalOptions="CenterAndExpand"
-            Text="Furniture Shop"
-            TextColor="White"
-            VerticalOptions="EndAndExpand" />
+            Spacing="0"
+            VerticalOptions="CenterAndExpand">
+            <Label
+                FontFamily="MaterialIconsFont"
+                FontSize="90"
+                HorizontalOptions="CenterAndExpand"
+                Text="house"
+                TextColor="White"
+                VerticalOptions="End" />
+            <Label
+                FontSize="21"
+                Text="Furniture Shop"
+                TextColor="White"
+                VerticalOptions="Start" />
+        </StackLayout>
         <StackLayout
             Grid.Row="1"
             Padding="40,0"
             Spacing="20">
             <Button
+                Padding="0,10"
                 BackgroundColor="#FCC046"
                 CornerRadius="27"
                 Text="Login" />
             <Button
+                Padding="0,10"
                 BackgroundColor="#F06B6D"
                 CornerRadius="27"
                 Text="Registration" />
         </StackLayout>
         <Label
             Grid.Row="1"
+            Padding="0,0,0,10"
             HorizontalOptions="Center"
             Text="За орду, за альянс!"
             TextColor="White"
