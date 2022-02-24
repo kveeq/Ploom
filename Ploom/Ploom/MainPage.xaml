@@ -6,56 +6,57 @@
     BackgroundImageSource="mainFon.png"
     NavigationPage.HasNavigationBar="False"
     Visual="Material">
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="5*" />
-            <RowDefinition Height="5*" />
-        </Grid.RowDefinitions>
-        <StackLayout
-            Grid.Row="0"
-            HorizontalOptions="CenterAndExpand"
-            Spacing="0"
-            VerticalOptions="CenterAndExpand">
-            <Label
-                FontFamily="MaterialIconsFont"
-                FontSize="90"
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <StackLayout
+                Grid.Row="0"
                 HorizontalOptions="CenterAndExpand"
-                Text="house"
-                TextColor="White"
-                VerticalOptions="End" />
+                Spacing="0"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                    FontFamily="MaterialIconsFont"
+                    FontSize="90"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="house"
+                    TextColor="White"
+                    VerticalOptions="End" />
+                <Label
+                    FontSize="21"
+                    Text="Furniture Shop"
+                    TextColor="White"
+                    VerticalOptions="Start" />
+            </StackLayout>
+            <StackLayout
+                Grid.Row="1"
+                Padding="40,0"
+                Spacing="20">
+                <Button
+                    x:Name="LoginPageBtn"
+                    Padding="0,10"
+                    BackgroundColor="#FCC046"
+                    Clicked="LoginPageBtn_Clicked"
+                    CornerRadius="27"
+                    Text="Login" />
+                <Button
+                    x:Name="RegistrationPageBtn"
+                    Padding="0,10"
+                    BackgroundColor="#F06B6D"
+                    Clicked="RegistrationPageBtn_Clicked"
+                    CornerRadius="27"
+                    Text="Registration" />
+            </StackLayout>
             <Label
-                FontSize="21"
-                Text="Furniture Shop"
+                Grid.Row="1"
+                Padding="0,0,0,10"
+                HorizontalOptions="Center"
+                Text="За орду, за альянс!"
                 TextColor="White"
-                VerticalOptions="Start" />
-        </StackLayout>
-        <StackLayout
-            Grid.Row="1"
-            Padding="40,0"
-            Spacing="20">
-            <Button
-                x:Name="LoginPageBtn"
-                Padding="0,10"
-                BackgroundColor="#FCC046"
-                Clicked="LoginPageBtn_Clicked"
-                CornerRadius="27"
-                Text="Login" />
-            <Button
-                x:Name="RegistrationPageBtn"
-                Padding="0,10"
-                BackgroundColor="#F06B6D"
-                Clicked="RegistrationPageBtn_Clicked"
-                CornerRadius="27"
-                Text="Registration" />
-        </StackLayout>
-        <Label
-            Grid.Row="1"
-            Padding="0,0,0,10"
-            HorizontalOptions="Center"
-            Text="За орду, за альянс!"
-            TextColor="White"
-            VerticalOptions="EndAndExpand" />
-    </Grid>
+                VerticalOptions="EndAndExpand" />
+        </Grid>
+    </ContentPage.Content>
 
 </ContentPage>

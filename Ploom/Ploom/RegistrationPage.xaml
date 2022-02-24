@@ -39,28 +39,38 @@
             VerticalOptions="FillAndExpand">
             <StackLayout
                 Padding="10,0"
-                Spacing="15"
+                Spacing="20"
                 VerticalOptions="CenterAndExpand">
-                <Entry
-                    BackgroundColor="White"
-                    Placeholder="ФИО"
-                    PlaceholderColor="#ACACAC" />
-                <Entry
-                    BackgroundColor="White"
-                    Placeholder="Номер телефона"
-                    PlaceholderColor="#ACACAC" />
-                <Entry
-                    BackgroundColor="White"
-                    Placeholder="E-mail"
-                    PlaceholderColor="#ACACAC" />
-                <Entry
-                    BackgroundColor="White"
-                    Placeholder="Login"
-                    PlaceholderColor="#ACACAC" />
-                <Entry
-                    BackgroundColor="White"
-                    Placeholder="Password"
-                    PlaceholderColor="#ACACAC" />
+                <Frame Padding="0" IsClippedToBounds="True">
+                    <Entry
+                        BackgroundColor="White"
+                        Placeholder="ФИО"
+                        PlaceholderColor="#ACACAC" />
+                </Frame>
+                <Frame Padding="0" IsClippedToBounds="True">
+                    <Entry
+                        BackgroundColor="White"
+                        Placeholder="Номер телефона"
+                        PlaceholderColor="#ACACAC" />
+                </Frame>
+                <Frame Padding="0" IsClippedToBounds="True">
+                    <Entry
+                        BackgroundColor="White"
+                        Placeholder="E-mail"
+                        PlaceholderColor="#ACACAC" />
+                </Frame>
+                <Frame Padding="0" IsClippedToBounds="True">
+                    <Entry
+                        BackgroundColor="White"
+                        Placeholder="Login"
+                        PlaceholderColor="#ACACAC" />
+                </Frame>
+                <Frame Padding="0" IsClippedToBounds="True">
+                    <Entry
+                        BackgroundColor="White"
+                        Placeholder="Password"
+                        PlaceholderColor="#ACACAC" />
+                </Frame>
             </StackLayout>
         </Frame>
         <Button
