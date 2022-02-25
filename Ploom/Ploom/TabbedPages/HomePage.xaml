@@ -2,8 +2,7 @@
 <ContentPage
     x:Class="Ploom.TabbedPages.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    >
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <StackLayout>
         <StackLayout>
             <Label
@@ -81,11 +80,15 @@
         </StackLayout>
         <ScrollView>
             <StackLayout>
-                <ListView x:Name="GoodsLstViw" HasUnevenRows="True">
+                <ListView
+                    x:Name="GoodsLstViw"
+                    HasUnevenRows="True"
+                    SeparatorVisibility="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout
+                                    Padding="10"
                                     HorizontalOptions="CenterAndExpand"
                                     Orientation="Horizontal"
                                     Spacing="20">
