@@ -51,13 +51,13 @@
                     <Entry
                         BackgroundColor="White"
                         Placeholder="Номер телефона"
-                        PlaceholderColor="#ACACAC" />
+                        PlaceholderColor="#ACACAC" Keyboard="Telephone"/>
                 </Frame>
                 <Frame Padding="0" IsClippedToBounds="True">
                     <Entry
                         BackgroundColor="White"
                         Placeholder="E-mail"
-                        PlaceholderColor="#ACACAC" />
+                        PlaceholderColor="#ACACAC" Keyboard="Email" />
                 </Frame>
                 <Frame Padding="0" IsClippedToBounds="True">
                     <Entry
@@ -69,7 +69,7 @@
                     <Entry
                         BackgroundColor="White"
                         Placeholder="Password"
-                        PlaceholderColor="#ACACAC" />
+                        PlaceholderColor="#ACACAC" IsPassword="True" />
                 </Frame>
             </StackLayout>
         </Frame>

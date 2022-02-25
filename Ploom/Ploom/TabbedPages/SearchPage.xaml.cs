@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
-namespace Ploom
+namespace Ploom.TabbedPages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : Xamarin.Forms.TabbedPage
+    public partial class SearchPage : ContentPage
     {
-        public Page1()
+        public SearchPage()
         {
             InitializeComponent();
-            On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }
     }
 }
