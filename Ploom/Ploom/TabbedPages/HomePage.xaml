@@ -31,6 +31,17 @@
                     Color="#8B8DC0" />
             </StackLayout>
             <StackLayout>
+                <Picker
+                    Title="Cheir"
+                    BackgroundColor="Transparent"
+                    FontSize="14"
+                    TextColor="#8B8DC0" />
+                <BoxView
+                    Margin="15,0"
+                    HeightRequest="1"
+                    Color="#8B8DC0" />
+            </StackLayout>
+            <StackLayout>
                 <Button
                     x:Name="TableBtn"
                     BackgroundColor="Transparent"
@@ -78,49 +89,46 @@
                     Color="#8B8DC0" />
             </StackLayout>
         </StackLayout>
-        <ScrollView>
-            <StackLayout>
-                <ListView
-                    x:Name="GoodsLstViw"
-                    HasUnevenRows="True"
-                    SeparatorVisibility="None">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout
-                                    Padding="10"
-                                    HorizontalOptions="CenterAndExpand"
-                                    Orientation="Horizontal"
-                                    Spacing="20">
-                                    <Frame WidthRequest="100">
+        <StackLayout>
+
+            <ListView
+                x:Name="GoodsLstViw"
+                HasUnevenRows="True"
+                HorizontalOptions="StartAndExpand"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Frame CornerRadius="20">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image
+                                            HeightRequest="100"
+                                            Source="qq"
+                                            WidthRequest="100" />
                                         <StackLayout>
-                                            <Image
-                                                HeightRequest="100"
-                                                Source="{Binding Path}"
-                                                WidthRequest="100" />
-                                            <Label Text="{Binding Name}" />
-                                            <Label Text="{Binding Description}" />
-                                            <Label Text="{Binding Price}" />
+                                            <Label
+                                                FontSize="17"
+                                                Text="{Binding Name}"
+                                                TextColor="#6D6D6D" />
+                                            <Label
+                                                FontSize="15"
+                                                Text="{Binding Description}"
+                                                TextColor="#9A9A9A" />
+                                            <Label
+                                                Margin="0,10"
+                                                FontSize="20"
+                                                Text="{Binding Price}"
+                                                TextColor="#D37C7E" />
                                         </StackLayout>
-                                    </Frame>
-                                    <Frame WidthRequest="100">
-                                        <StackLayout>
-                                            <Image
-                                                HeightRequest="100"
-                                                Source="{Binding Path}"
-                                                WidthRequest="100" />
-                                            <Label Text="{Binding Name}" />
-                                            <Label Text="{Binding Description}" />
-                                            <Label Text="{Binding Price}" />
-                                        </StackLayout>
-                                    </Frame>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
-        </ScrollView>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

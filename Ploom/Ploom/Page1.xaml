@@ -13,9 +13,9 @@
     NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
 
-    <local:HomePage IconImageSource="Homei.ico" />
-    <local:SearchPage IconImageSource="search.ico" />
-    <local:BusketPage IconImageSource="Basket.ico" />
-    <local:ProfilPage IconImageSource="Profil.ico" />
+    <local:HomePage Title="Главная" IconImageSource="Homei.ico" />
+    <local:SearchPage Title="Поиск" IconImageSource="search.ico" />
+    <local:BusketPage Title="Корзина" IconImageSource="Basket.ico" />
+    <local:ProfilPage Title="Профиль" IconImageSource="Profil.ico" />
 
 </TabbedPage>
