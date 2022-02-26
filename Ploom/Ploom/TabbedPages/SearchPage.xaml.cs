@@ -15,7 +15,7 @@ namespace Ploom.TabbedPages
         public SearchPage()
         {
             InitializeComponent(); FirnitureService.All();
-            GoodsLstViw.ItemsSource = FirnitureService.lst;
+            GoodsFilterLstView.ItemsSource = FirnitureService.lst;
             //GoodsLstViw2.ItemsSource = FirnitureService.lst;
         }
 
@@ -24,36 +24,36 @@ namespace Ploom.TabbedPages
 
         }
 
-        private void ChairBtn_Clicked(object sender, EventArgs e)
-        {
-            CleanAllBtnBoxViews();
-            ChairBoxVw.IsVisible = true;
-        }
-
-        private void TableBtn_Clicked(object sender, EventArgs e)
-        {
-            CleanAllBtnBoxViews();
-            TableBoxVw.IsVisible = true;
-        }
-
-        private void ComodBtn_Clicked(object sender, EventArgs e)
-        {
-            CleanAllBtnBoxViews();
-            ComodBoxVw.IsVisible = true;
-        }
-
-        private void cupboard_Clicked(object sender, EventArgs e)
-        {
-            CleanAllBtnBoxViews();
-            CupboardBoxVw.IsVisible = true;
-        }
-
         private void CleanAllBtnBoxViews()
         {
-            ChairBoxVw.IsVisible = false;
-            TableBoxVw.IsVisible = false;
-            ComodBoxVw.IsVisible = false;
-            CupboardBoxVw.IsVisible = false;
+            MaterialBoxVw.IsVisible = false;
+            ColorBoxVw.IsVisible = false;
+            ProductBoxVw.IsVisible = false;
+            PriceBoxVw.IsVisible = false;
+        }
+
+        private void MaterialBtn_Clicked(object sender, EventArgs e)
+        {
+            CleanAllBtnBoxViews();
+            MaterialBoxVw.IsVisible = true;
+        }
+
+        private void ColorBtn_Clicked(object sender, EventArgs e)
+        {
+            CleanAllBtnBoxViews();
+            ColorBoxVw.IsVisible = true;
+        }
+
+        private void ProductBtn_Clicked(object sender, EventArgs e)
+        {
+            CleanAllBtnBoxViews();
+            ProductBoxVw.IsVisible = true;
+        }
+
+        private void PriceBtn_Clicked(object sender, EventArgs e)
+        {
+            CleanAllBtnBoxViews();
+            PriceBoxVw.IsVisible = true;
         }
     }
 }

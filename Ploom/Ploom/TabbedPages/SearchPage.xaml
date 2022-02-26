@@ -2,61 +2,49 @@
 <ContentPage
     x:Class="Ploom.TabbedPages.SearchPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundColor="#F4F4FF">
     <StackLayout>
-        <StackLayout>
+        <Frame BackgroundColor="White">
+            <StackLayout>
+            <StackLayout>
             <Label
-                Padding="20"
+                Padding="10"
                 FontSize="24"
                 Text="Товары"
-                TextColor="#887D7D" />
+                TextColor="#887D7D"/>
+        </StackLayout>
+        <StackLayout>
+            <SearchBar />
         </StackLayout>
         <StackLayout
-            HorizontalOptions="FillAndExpand"
+            HorizontalOptions="CenterAndExpand"
             Orientation="Horizontal"
             Spacing="0"
             VerticalOptions="StartAndExpand">
             <StackLayout>
                 <Button
-                    x:Name="ChairBtn"
+                    x:Name="MaterialBtn"
                     BackgroundColor="Transparent"
-                    Clicked="ChairBtn_Clicked"
                     FontSize="14"
-                    Text="Стулья"
+                    Clicked="MaterialBtn_Clicked"
+                    Text="Материал"
                     TextColor="#8B8DC0" />
                 <BoxView
-                    x:Name="ChairBoxVw"
+                    x:Name="MaterialBoxVw"
                     Margin="15,0"
                     HeightRequest="1"
                     Color="#8B8DC0" />
             </StackLayout>
             <StackLayout>
                 <Button
-                    x:Name="TableBtn"
+                    x:Name="ColorBtn"
                     BackgroundColor="Transparent"
-                    Clicked="TableBtn_Clicked"
                     FontSize="14"
-                    Text="Столы"
+                    Clicked="ColorBtn_Clicked"
+                    Text="Цвет"
                     TextColor="#8B8DC0" />
                 <BoxView
-                    x:Name="TableBoxVw"
-                    Margin="15,0"
-                    HeightRequest="1"
-                    IsVisible="False"
-                    Color="#8B8DC0" />
-            </StackLayout>
-            <StackLayout>
-                <Button
-                    x:Name="ComodBtn"
-                    BackgroundColor="Transparent"
-                    BorderColor="White"
-                    BorderWidth="0"
-                    Clicked="ComodBtn_Clicked"
-                    FontSize="14"
-                    Text="Комоды"
-                    TextColor="#8B8DC0" />
-                <BoxView
-                    x:Name="ComodBoxVw"
+                    x:Name="ColorBoxVw"
                     Margin="15,0"
                     HeightRequest="1"
                     IsVisible="False"
@@ -64,46 +52,76 @@
             </StackLayout>
             <StackLayout>
                 <Button
-                    x:Name="cupboard"
+                    x:Name="ProductBtn"
                     BackgroundColor="Transparent"
-                    Clicked="cupboard_Clicked"
                     FontSize="14"
-                    Text="Шкафы"
+                    Clicked="ProductBtn_Clicked"
+                    Text="Товары"
                     TextColor="#8B8DC0" />
                 <BoxView
-                    x:Name="CupboardBoxVw"
+                    x:Name="ProductBoxVw"
+                    Margin="15,0"
+                    HeightRequest="1"
+                    IsVisible="False"
+                    Color="#8B8DC0" />
+            </StackLayout>
+            <StackLayout>
+                <Button
+                    x:Name="PriceBtn"
+                    BackgroundColor="Transparent"
+                    FontSize="14"
+                    Clicked="PriceBtn_Clicked"
+                    Text="Цена"
+                    TextColor="#8B8DC0" />
+                <BoxView
+                    x:Name="PriceBoxVw"
                     Margin="15,0"
                     HeightRequest="1"
                     IsVisible="False"
                     Color="#8B8DC0" />
             </StackLayout>
         </StackLayout>
+        </StackLayout>
+        </Frame>
         <StackLayout>
-            <ListView
-                x:Name="GoodsLstViw"
+                <ListView
+                x:Name="GoodsFilterLstView"
                 HasUnevenRows="True"
                 HorizontalOptions="StartAndExpand"
                 SeparatorVisibility="None">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Padding="10">
-                                <Frame CornerRadius="20">
-                                    <StackLayout>
-                                        <Image
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10">
+                                    <Frame CornerRadius="20">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image
                                             HeightRequest="100"
-                                            Source="{Binding Path}"
+                                            Source="qq"
                                             WidthRequest="100" />
-                                        <Label Text="{Binding Name}" />
-                                        <Label Text="{Binding Description}" />
-                                        <Label Text="{Binding Price}" />
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                                            <StackLayout>
+                                                <Label
+                                                FontSize="17"
+                                                Text="{Binding Name}"
+                                                TextColor="#6D6D6D" />
+                                                <Label
+                                                FontSize="15"
+                                                Text="{Binding Description}"
+                                                TextColor="#9A9A9A" />
+                                                <Label
+                                                Margin="0,10"
+                                                FontSize="20"
+                                                Text="{Binding Price}"
+                                                TextColor="#D37C7E" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </StackLayout>
-    </StackLayout>
+
 </ContentPage>

@@ -4,18 +4,20 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <StackLayout>
-        <StackLayout>
+        <Frame>
+            <StackLayout>
+                <StackLayout>
             <Label
-                Padding="20"
+                Padding="10"
                 FontSize="24"
                 Text="Товары"
-                TextColor="#887D7D" />
+                TextColor="#887D7D"/>
         </StackLayout>
         <StackLayout
-            HorizontalOptions="FillAndExpand"
+            HorizontalOptions="CenterAndExpand"
             Orientation="Horizontal"
             Spacing="0"
-            VerticalOptions="StartAndExpand">
+            VerticalOptions="StartAndExpand" >
             <StackLayout>
                 <Button
                     x:Name="ChairBtn"
@@ -26,17 +28,6 @@
                     TextColor="#8B8DC0" />
                 <BoxView
                     x:Name="ChairBoxVw"
-                    Margin="15,0"
-                    HeightRequest="1"
-                    Color="#8B8DC0" />
-            </StackLayout>
-            <StackLayout>
-                <Picker
-                    Title="Cheir"
-                    BackgroundColor="Transparent"
-                    FontSize="14"
-                    TextColor="#8B8DC0" />
-                <BoxView
                     Margin="15,0"
                     HeightRequest="1"
                     Color="#8B8DC0" />
@@ -89,6 +80,8 @@
                     Color="#8B8DC0" />
             </StackLayout>
         </StackLayout>
+            </StackLayout>
+        </Frame>
         <StackLayout>
 
             <ListView
