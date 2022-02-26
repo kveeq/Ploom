@@ -1,12 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ploom.TabbedPages.ProfilPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="Ploom.TabbedPages.ProfilPage" BackgroundColor="#F4F4FF" >
+
+    <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+        <StackLayout VerticalOptions="StartAndExpand" BackgroundColor="#FCC046">
+            <Label Text="Личный кабинет" HorizontalOptions="CenterAndExpand" FontSize="24" Margin="20" TextColor="White"/>
+            <StackLayout Orientation="Horizontal" Margin="30">
+                <Image Source="Profil.ico" HeightRequest="100" WidthRequest="100"/>
+                <Label Text="Фамилия Имя Отчество 
+                       +89800555359" FontSize="18" TextColor="White"/>
+            </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Button ImageSource="message.png" Text="Предложения для улучшения" TextColor="#887D7D" BackgroundColor="White" FontSize="12"/>
+            <Button ImageSource="chat.png" Text="Отзывы" TextColor="#887D7D" BackgroundColor="White" FontSize="12"/>
+            <StackLayout />
+        </StackLayout>
+    </StackLayout>
 </ContentPage>
