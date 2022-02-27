@@ -4,86 +4,84 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <StackLayout>
-        <Frame>
+        <Frame Margin="0" Padding="0">
             <StackLayout>
                 <StackLayout>
-            <Label
-                Padding="10"
-                FontSize="24"
-                Text="Товары"
-                TextColor="#887D7D"/>
-        </StackLayout>
-        <StackLayout
-            HorizontalOptions="CenterAndExpand"
-            Orientation="Horizontal"
-            Spacing="0"
-            VerticalOptions="StartAndExpand" >
-            <StackLayout>
-                <Button
-                    x:Name="ChairBtn"
-                    BackgroundColor="Transparent"
-                    Clicked="ChairBtn_Clicked"
-                    FontSize="14"
-                    Text="Стулья"
-                    TextColor="#8B8DC0" />
-                <BoxView
-                    x:Name="ChairBoxVw"
-                    Margin="15,0"
-                    HeightRequest="1"
-                    Color="#8B8DC0" />
-            </StackLayout>
-            <StackLayout>
-                <Button
-                    x:Name="TableBtn"
-                    BackgroundColor="Transparent"
-                    Clicked="TableBtn_Clicked"
-                    FontSize="14"
-                    Text="Столы"
-                    TextColor="#8B8DC0" />
-                <BoxView
-                    x:Name="TableBoxVw"
-                    Margin="15,0"
-                    HeightRequest="1"
-                    IsVisible="False"
-                    Color="#8B8DC0" />
-            </StackLayout>
-            <StackLayout>
-                <Button
-                    x:Name="ComodBtn"
-                    BackgroundColor="Transparent"
-                    BorderColor="White"
-                    BorderWidth="0"
-                    Clicked="ComodBtn_Clicked"
-                    FontSize="14"
-                    Text="Комоды"
-                    TextColor="#8B8DC0" />
-                <BoxView
-                    x:Name="ComodBoxVw"
-                    Margin="15,0"
-                    HeightRequest="1"
-                    IsVisible="False"
-                    Color="#8B8DC0" />
-            </StackLayout>
-            <StackLayout>
-                <Button
-                    x:Name="cupboard"
-                    BackgroundColor="Transparent"
-                    Clicked="cupboard_Clicked"
-                    FontSize="14"
-                    Text="Шкафы"
-                    TextColor="#8B8DC0" />
-                <BoxView
-                    x:Name="CupboardBoxVw"
-                    Margin="15,0"
-                    HeightRequest="1"
-                    IsVisible="False"
-                    Color="#8B8DC0" />
-            </StackLayout>
-        </StackLayout>
+                    <Label
+                        Padding="20"
+                        FontSize="24"
+                        Text="Товары"
+                        TextColor="#887D7D" />
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="StartAndExpand">
+                    <StackLayout>
+                        <Button
+                            x:Name="ChairBtn"
+                            BackgroundColor="Transparent"
+                            Clicked="ChairBtn_Clicked"
+                            FontSize="14"
+                            Text="Стулья"
+                            TextColor="#8B8DC0" />
+                        <BoxView
+                            x:Name="ChairBoxVw"
+                            Margin="15,-10,15,10"
+                            HeightRequest="1"
+                            Color="#8B8DC0" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Button
+                            x:Name="TableBtn"
+                            BackgroundColor="Transparent"
+                            Clicked="TableBtn_Clicked"
+                            FontSize="14"
+                            Text="Столы"
+                            TextColor="#8B8DC0" />
+                        <BoxView
+                            x:Name="TableBoxVw"
+                            Margin="15,-10,15,10"
+                            HeightRequest="1"
+                            IsVisible="False"
+                            Color="#8B8DC0" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Button
+                            x:Name="ComodBtn"
+                            BackgroundColor="Transparent"
+                            BorderColor="White"
+                            BorderWidth="0"
+                            Clicked="ComodBtn_Clicked"
+                            FontSize="14"
+                            Text="Комоды"
+                            TextColor="#8B8DC0" />
+                        <BoxView
+                            x:Name="ComodBoxVw"
+                            Margin="15,-10,15,10"
+                            HeightRequest="1"
+                            IsVisible="False"
+                            Color="#8B8DC0" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Button
+                            x:Name="cupboard"
+                            BackgroundColor="Transparent"
+                            Clicked="cupboard_Clicked"
+                            FontSize="14"
+                            Text="Шкафы"
+                            TextColor="#8B8DC0" />
+                        <BoxView
+                            x:Name="CupboardBoxVw"
+                            Margin="15,-10,15,10"
+                            HeightRequest="1"
+                            IsVisible="False"
+                            Color="#8B8DC0" />
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
         </Frame>
         <StackLayout>
-
             <ListView
                 x:Name="GoodsLstViw"
                 HasUnevenRows="True"

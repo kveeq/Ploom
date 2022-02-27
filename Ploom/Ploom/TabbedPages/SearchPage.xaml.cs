@@ -38,10 +38,10 @@ namespace Ploom.TabbedPages
             MaterialBoxVw.IsVisible = true;
             string result = await DisplayActionSheet("Выберите материал:", null, null, "Искусственная кожа", "Искусственный мех", "Дерево", "Керамика");
 
-            switch(result)
+            switch (result)
             {
                 case "Искусственная кожа":
-                    
+
                     break;
 
                 case "Искусственный мех":
@@ -91,13 +91,13 @@ namespace Ploom.TabbedPages
         {
             CleanAllBtnBoxViews();
             PriceBoxVw.IsVisible = true;
-
-            string result = await DisplayActionSheet("Ценовой диапазон:", null, null, "До 3000 р", "От 3000 до 7000 р", "От 7000 до 10 000 р");
+            string[] aa = new string[3] { "До 3000 р", "От 3000 до 7000 р", "От 7000 до 10 000 р" };
+            string result = await DisplayActionSheet("Ценовой диапазон:", "Ok", "ok1", aa);
 
             switch (result)
             {
                 case "До 3000 р":
-
+                    await DisplayAlert("", result, "ok");
                     break;
 
                 case "От 3000 до 7000 р":
