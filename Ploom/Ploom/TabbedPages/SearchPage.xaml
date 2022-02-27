@@ -14,7 +14,7 @@
                 TextColor="#887D7D"/>
         </StackLayout>
         <StackLayout>
-            <SearchBar />
+            <SearchBar TextColor="Gray"/>
         </StackLayout>
         <StackLayout
             HorizontalOptions="CenterAndExpand"
@@ -22,14 +22,14 @@
             Spacing="0"
             VerticalOptions="StartAndExpand">
             <StackLayout>
-                <Button
+                        <Button
                     x:Name="MaterialBtn"
                     BackgroundColor="Transparent"
                     FontSize="14"
                     Clicked="MaterialBtn_Clicked"
                     Text="Материал"
                     TextColor="#8B8DC0" />
-                <BoxView
+                        <BoxView
                     x:Name="MaterialBoxVw"
                     Margin="15,0"
                     HeightRequest="1"

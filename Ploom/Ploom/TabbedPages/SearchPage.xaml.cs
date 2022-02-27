@@ -32,10 +32,28 @@ namespace Ploom.TabbedPages
             PriceBoxVw.IsVisible = false;
         }
 
-        private void MaterialBtn_Clicked(object sender, EventArgs e)
+        private async void MaterialBtn_Clicked(object sender, EventArgs e)
         {
             CleanAllBtnBoxViews();
             MaterialBoxVw.IsVisible = true;
+            string result = await DisplayActionSheet("Выберите материал:", null, null, "Искусственная кожа", "Искусственный мех", "Дерево", "Керамика");
+
+            switch(result)
+            {
+                case "Искусственная кожа":
+                    
+                    break;
+
+                case "Искусственный мех":
+                    break;
+
+                case "Дерево":
+                    break;
+
+                case "Керамика":
+                    break;
+
+            }
         }
 
         private void ColorBtn_Clicked(object sender, EventArgs e)
@@ -44,16 +62,51 @@ namespace Ploom.TabbedPages
             ColorBoxVw.IsVisible = true;
         }
 
-        private void ProductBtn_Clicked(object sender, EventArgs e)
+        private async void ProductBtn_Clicked(object sender, EventArgs e)
         {
             CleanAllBtnBoxViews();
             ProductBoxVw.IsVisible = true;
+
+            string result = await DisplayActionSheet("Выберите тип товара:", null, null, "Стулья", "Столы", "Комоды", "Шкафы");
+
+            switch (result)
+            {
+                case "Стулья":
+
+                    break;
+
+                case "Столы":
+                    break;
+
+                case "Комоды":
+                    break;
+
+                case "Шкафы":
+                    break;
+
+            }
         }
 
-        private void PriceBtn_Clicked(object sender, EventArgs e)
+        private async void PriceBtn_Clicked(object sender, EventArgs e)
         {
             CleanAllBtnBoxViews();
             PriceBoxVw.IsVisible = true;
+
+            string result = await DisplayActionSheet("Ценовой диапазон:", null, null, "До 3000 р", "От 3000 до 7000 р", "От 7000 до 10 000 р");
+
+            switch (result)
+            {
+                case "До 3000 р":
+
+                    break;
+
+                case "От 3000 до 7000 р":
+                    break;
+
+                case "От 7000 до 10 000 р":
+                    break;
+
+            }
         }
     }
 }
