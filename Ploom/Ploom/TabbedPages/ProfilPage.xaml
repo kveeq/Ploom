@@ -1,21 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ploom.TabbedPages.ProfilPage" BackgroundColor="#F4F4FF" >
+<ContentPage
+    x:Class="Ploom.TabbedPages.ProfilPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F4F4FF">
 
     <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
-        <StackLayout VerticalOptions="StartAndExpand" BackgroundColor="#FCC046">
-            <Label Text="Личный кабинет" HorizontalOptions="CenterAndExpand" FontSize="24" Margin="20" TextColor="White"/>
-            <StackLayout Orientation="Horizontal" Margin="30">
-                <Image Source="Profil.ico" HeightRequest="100" WidthRequest="100"/>
-                <Label Text="Фамилия Имя Отчество 
-                       +89800555359" FontSize="18" TextColor="White"/>
+        <StackLayout BackgroundColor="#FCC046" VerticalOptions="StartAndExpand">
+            <Label
+                Padding="15"
+                FontSize="18"
+                HorizontalOptions="CenterAndExpand"
+                Text="Личный кабинет"
+                TextColor="White" />
+            <StackLayout Padding="40,20,0,40" Orientation="Horizontal">
+                <ImageButton
+                    Margin="0,0,20,0"
+                    Aspect="AspectFill"
+                    CornerRadius="50"
+                    HeightRequest="90"
+                    Source="profiljpg"
+                    WidthRequest="90" />
+                <Label
+                    Margin="0,20,0,0"
+                    FontSize="13"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Фамилия Имя Отчество +89800555359"
+                    TextColor="White"
+                    VerticalOptions="Start" />
             </StackLayout>
         </StackLayout>
-        <StackLayout VerticalOptions="StartAndExpand">
-            <Button ImageSource="message.png" Text="Предложения для улучшения" TextColor="#887D7D" BackgroundColor="White" FontSize="12"/>
-            <Button ImageSource="chat.png" Text="Отзывы" TextColor="#887D7D" BackgroundColor="White" FontSize="12"/>
-            <StackLayout />
+        <StackLayout>
+            <StackLayout
+                Margin="0"
+                Padding="10"
+                BackgroundColor="White"
+                Orientation="Horizontal">
+                <Label
+                    FontFamily="MaterialIconsFont"
+                    FontSize="28"
+                    HorizontalOptions="Start"
+                    Text="&#xe0b7;"
+                    TextColor="#ADA7A7"
+                    VerticalOptions="CenterAndExpand" />
+                <Label
+                    FontSize="18"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Предложения для улучшения"
+                    TextColor="#ADA7A7"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout
+                Margin="0"
+                Padding="10"
+                BackgroundColor="White"
+                Orientation="Horizontal">
+                <Label
+                    FontFamily="MaterialIconsFont"
+                    FontSize="28"
+                    HorizontalOptions="Start"
+                    Text="&#xe0ca;"
+                    TextColor="#ADA7A7"
+                    VerticalOptions="CenterAndExpand" />
+                <Label
+                    FontSize="18"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Отзывы"
+                    TextColor="#ADA7A7"
+                    VerticalOptions="CenterAndExpand" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </ContentPage>
