@@ -108,7 +108,7 @@
                                     <StackLayout Orientation="Horizontal">
                                         <Image
                                             HeightRequest="100"
-                                            Source="qq"
+                                            Source="{Binding ImagePath}"
                                             WidthRequest="100" />
                                         <StackLayout>
                                             <Label

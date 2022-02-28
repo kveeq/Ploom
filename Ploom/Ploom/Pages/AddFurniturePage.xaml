@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ploom.Pages.AddFurniturePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="image.png">
+    <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                <Label
+                    Padding="10,20"
+                    FontAttributes="None"
+                    FontFamily="MaterialIconsFont"
+                    FontSize="43"
+                    HorizontalOptions="Start"
+                    Text="&#xe317;"
+                    TextColor="Black"
+                    VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="BackLbl" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Margin="0,0,43,0"
+                    FontSize="24"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Добавление мебели"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+            <Frame
+                Margin="40,40,40,40"
+                BackgroundColor="White"
+                CornerRadius="20"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <StackLayout
+                    Padding="10,0"
+                    Spacing="20"
+                    VerticalOptions="CenterAndExpand">
+                    <Frame Padding="0" IsClippedToBounds="True">
+                        <Entry
+                            x:Name="NameFurniture"
+                            BackgroundColor="White"
+                            Placeholder="Название мебели"
+                            PlaceholderColor="#ACACAC" />
+                    </Frame>
+                    <Frame Padding="0" IsClippedToBounds="True">
+                        <Entry
+                            x:Name="DescriptionFurniture"
+                            BackgroundColor="White"
+                            Placeholder="Описание"
+                            PlaceholderColor="#ACACAC" />
+                    </Frame>
+                    <Frame Padding="0" IsClippedToBounds="True">
+                        <Entry
+                            x:Name="PriceFurniture"
+                            BackgroundColor="White"
+                            Keyboard="Numeric"
+                            Placeholder="Цена"
+                            PlaceholderColor="#ACACAC" />
+                    </Frame>
+                    <Frame Padding="0" IsClippedToBounds="True">
+                        <Entry
+                            x:Name="ColorFurniture"
+                            BackgroundColor="White"
+                            Placeholder="Цвет"
+                            PlaceholderColor="#ACACAC" />
+                    </Frame>
+                    <Frame Padding="0" IsClippedToBounds="True">
+                        <Entry
+                            x:Name="TypeFurniture"
+                            BackgroundColor="White"
+                            Placeholder="Тип мебели"
+                            PlaceholderColor="#ACACAC" />
+                    </Frame>
+                    <Frame Padding="0" IsClippedToBounds="True">
+                        <Entry
+                            x:Name="MaterialFurniture"
+                            BackgroundColor="White"
+                            Placeholder="Материал"
+                            PlaceholderColor="#ACACAC" />
+                    </Frame>
+                </StackLayout>
+            </Frame>
+            <StackLayout
+                Margin="20,0,20,0"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="RegistrateBtn"
+                    Margin="0,0,0,20"
+                    Padding="20,10"
+                    BackgroundColor="#33344F"
+                    Clicked="RegistrateBtn_Clicked"
+                    CornerRadius="20"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Text="Open Image"
+                    TextTransform="None"
+                    VerticalOptions="EndAndExpand" />
+                <Button
+                    x:Name="SaveBtn"
+                    Margin="0,0,0,20"
+                    Padding="20,10"
+                    BackgroundColor="#33344F"
+                    Clicked="SaveBtn_Clicked"
+                    CornerRadius="20"
+                    FontSize="18"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Save furniture"
+                    TextTransform="None"
+                    VerticalOptions="EndAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
