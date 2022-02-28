@@ -6,6 +6,17 @@ namespace Ploom.Models
 {
     public class Basket
     {
+        public Basket()
+        {
+        }
+
+        public Basket(int quantity, Client clientId, Furniture furnitureId)
+        {
+            Quantity = quantity;
+            ClientId = clientId;
+            FurnitureId = furnitureId;
+        }
+
         public int Id { get; set; }
 
         public int Quantity { get; set; }

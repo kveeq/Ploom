@@ -6,7 +6,7 @@ using Ploom.Models;
 
 namespace Ploom.Db
 {
-    public class CRUDOperation<T>
+    public class CRUDOperation
     {
         readonly SQLiteConnection db;
         public CRUDOperation(string databasePath)
@@ -31,7 +31,6 @@ namespace Ploom.Db
         {
             return db.Table<Client>();
         }
-
         public Furniture GetProjectItem(int id)
         {
             return db.Get<Furniture>(id);

@@ -6,6 +6,21 @@ namespace Ploom.Models
 {
     public class Client
     {
+        public Client()
+        {
+        }
+
+        public Client(string surname, string name, string patronymic, string telephoneNumber, string eMail, string login, string password, int roleId)
+        {
+            Surname = surname;
+            Name = name;
+            Patronymic = patronymic;
+            TelephoneNumber = telephoneNumber;
+            EMail = eMail;
+            Login = login;
+            Password = password;
+            RoleId = roleId;
+        }
 
         public int Id { get; set; }
         public string Surname { get; set; }

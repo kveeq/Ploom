@@ -74,11 +74,13 @@
             </StackLayout>
         </Frame>
         <Button
+            x:Name="RegistrateBtn"
             Margin="0,0,0,20"
             Padding="20,10"
             BackgroundColor="#33344F"
             CornerRadius="20"
             FontSize="18"
+            Clicked="RegistrateBtn_Clicked"
             HorizontalOptions="CenterAndExpand"
             Text="Registration"
             TextTransform="None"

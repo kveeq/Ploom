@@ -6,6 +6,18 @@ namespace Ploom.Models
 {
     class Delivery
     {
+        public Delivery()
+        {
+        }
+
+        public Delivery(string deliveryDate, string expectedDeliveryDate, Order order, List<Courier> courier)
+        {
+            DeliveryDate = deliveryDate;
+            ExpectedDeliveryDate = expectedDeliveryDate;
+            Order = order;
+            Courier = courier;
+        }
+
         public int Id { get; set; }
         public string DeliveryDate { get; set; }
         public string ExpectedDeliveryDate { get; set; }
