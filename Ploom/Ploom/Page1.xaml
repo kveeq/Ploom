@@ -7,6 +7,7 @@
     xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:local="clr-namespace:Ploom.TabbedPages"
+    xmlns:lo="clr-namespace:Ploom"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     android:TabbedPage.ToolbarPlacement="Bottom"
     BarTextColor="Black"
@@ -16,6 +17,6 @@
     <local:HomePage Title="Главная" IconImageSource="Homei.ico" />
     <local:SearchPage Title="Поиск" IconImageSource="search.ico" />
     <local:BusketPage Title="Корзина" IconImageSource="Basket.ico" />
-    <local:ProfilPage Title="Профиль" IconImageSource="Profil.ico" />
+    <local:ProfilPage Title="Профиль" IconImageSource="Profil.ico" BindingContext="{x:Static lo:Page1.client}"/>
 
 </TabbedPage>

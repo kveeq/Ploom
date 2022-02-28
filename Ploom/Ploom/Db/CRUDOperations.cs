@@ -14,10 +14,10 @@ namespace Ploom.Db
             db = new SQLiteConnection(databasePath);
             db.CreateTable<Furniture>();
             db.CreateTable<Client>();
-            db.CreateTable<Order>();
-            db.CreateTable<Basket>();
-            db.CreateTable<Courier>();
-            db.CreateTable<Delivery>();
+            //db.CreateTable<Basket>();
+            //db.CreateTable<Order>();
+            //db.CreateTable<Courier>();
+            //db.CreateTable<Delivery>();
         }
         public IEnumerable<Furniture> GetFurnituress()
         {

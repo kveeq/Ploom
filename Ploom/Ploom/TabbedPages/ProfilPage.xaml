@@ -25,7 +25,7 @@
                     Margin="0,20,0,0"
                     FontSize="13"
                     HorizontalOptions="StartAndExpand"
-                    Text="Фамилия Имя Отчество +89800555359"
+                    Text="{Binding Name}"
                     TextColor="White"
                     VerticalOptions="Start" />
             </StackLayout>

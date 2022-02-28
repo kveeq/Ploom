@@ -43,33 +43,41 @@
                 VerticalOptions="CenterAndExpand">
                 <Frame Padding="0" IsClippedToBounds="True">
                     <Entry
+                        x:Name="FIOEntry"
                         BackgroundColor="White"
                         Placeholder="ФИО"
                         PlaceholderColor="#ACACAC" />
                 </Frame>
                 <Frame Padding="0" IsClippedToBounds="True">
                     <Entry
+                        x:Name="TelNumberEntry"
                         BackgroundColor="White"
+                        Keyboard="Telephone"
                         Placeholder="Номер телефона"
-                        PlaceholderColor="#ACACAC" Keyboard="Telephone"/>
+                        PlaceholderColor="#ACACAC" />
                 </Frame>
                 <Frame Padding="0" IsClippedToBounds="True">
                     <Entry
+                        x:Name="EmailEntry"
                         BackgroundColor="White"
+                        Keyboard="Email"
                         Placeholder="E-mail"
-                        PlaceholderColor="#ACACAC" Keyboard="Email" />
+                        PlaceholderColor="#ACACAC" />
                 </Frame>
                 <Frame Padding="0" IsClippedToBounds="True">
                     <Entry
+                        x:Name="LoginEntry"
                         BackgroundColor="White"
                         Placeholder="Login"
                         PlaceholderColor="#ACACAC" />
                 </Frame>
                 <Frame Padding="0" IsClippedToBounds="True">
                     <Entry
+                        x:Name="PassEntry"
                         BackgroundColor="White"
+                        IsPassword="True"
                         Placeholder="Password"
-                        PlaceholderColor="#ACACAC" IsPassword="True" />
+                        PlaceholderColor="#ACACAC" />
                 </Frame>
             </StackLayout>
         </Frame>
@@ -78,9 +86,9 @@
             Margin="0,0,0,20"
             Padding="20,10"
             BackgroundColor="#33344F"
+            Clicked="RegistrateBtn_Clicked"
             CornerRadius="20"
             FontSize="18"
-            Clicked="RegistrateBtn_Clicked"
             HorizontalOptions="CenterAndExpand"
             Text="Registration"
             TextTransform="None"

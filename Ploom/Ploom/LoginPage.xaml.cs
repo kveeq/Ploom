@@ -25,7 +25,20 @@ namespace Ploom
 
         private async void LoginBtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page1());
+            bool state = false;
+            foreach (var item in App.Db.GetClients())
+            {
+                if (item.Login == LoginLbl.Text)
+                {
+                    if (item.Password == PassLbl.Text)
+                    {
+                        state = true;
+                        await Navigation.PushModalAsync(new NavigationPage(new Page1(item)));
+                    }
+                }
+            }
+            if (!state)
+                await DisplayAlert("Error", "Неправильный пароль или логин", "Ok");
         }
     }
 }

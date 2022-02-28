@@ -21,12 +21,8 @@ namespace Ploom.Models
 
         [AutoIncrement, PrimaryKey, Column("_id")]
         public int Id { get; set; }
-
         public int Amount { get; set; }
-
         public string Date { get; set; }
-
-
         public Basket BasketId { get; set; }
     }
 }
