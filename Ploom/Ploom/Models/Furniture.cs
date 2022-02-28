@@ -10,16 +10,25 @@ namespace Ploom.Models
         {
         }
 
-        public Furniture(string name, string description, string price)
+        public Furniture(string name, string description, string price, string color, string type, string material, string imagePath)
         {
-            Name = name;
-            Description = description;
-            Price = price;
+            Color = color;
+            Type = type;
+            Material = material;
+            ImagePath = imagePath;
         }
 
-        public string _id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Price { get; set; }
+
+        public string Color { get; set; }
+
+        public string Type { get; set; }
+
+        public string Material { get; set; }
+
+        public string ImagePath { get; set; }
     }
 }
