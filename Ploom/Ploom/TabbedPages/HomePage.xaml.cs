@@ -56,5 +56,10 @@ namespace Ploom.TabbedPages
             ComodBoxVw.IsVisible = false;
             CupboardBoxVw.IsVisible = false;
         }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddFurniturePage());
+        }
     }
 }
