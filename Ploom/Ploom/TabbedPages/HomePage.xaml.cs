@@ -16,8 +16,8 @@ namespace Ploom.TabbedPages
         public HomePage()
         {
             InitializeComponent();
-            FirnitureService.All();
-            GoodsLstViw.ItemsSource = FirnitureService.lst;
+            //FirnitureService.All();
+            GoodsLstViw.ItemsSource = App.Db.GetFurnituress();
         }
 
         private void HomeBtn_Tapped(object sender, EventArgs e)

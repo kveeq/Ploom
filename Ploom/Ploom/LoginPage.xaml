@@ -45,23 +45,26 @@
                     Spacing="30"
                     VerticalOptions="CenterAndExpand">
                     <Entry
+                        x:Name="LoginLbl"
                         BackgroundColor="White"
                         HorizontalOptions="FillAndExpand"
                         Placeholder="Login"
                         PlaceholderColor="#B2B2B2"
                         VerticalOptions="CenterAndExpand" />
                     <Entry
+                        x:Name="PassLbl"
                         BackgroundColor="White"
                         HorizontalOptions="FillAndExpand"
+                        IsPassword="True"
                         Placeholder="Password"
                         PlaceholderColor="#B2B2B2"
                         VerticalOptions="CenterAndExpand" />
                     <Button
-                        Grid.Row="1"
                         x:Name="LoginBtn"
-                        Clicked="LoginBtn_Clicked"
+                        Grid.Row="1"
                         Padding="40,13"
                         BackgroundColor="#FCC046"
+                        Clicked="LoginBtn_Clicked"
                         CornerRadius="10"
                         FontSize="16"
                         HorizontalOptions="Start"

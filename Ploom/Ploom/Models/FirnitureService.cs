@@ -10,10 +10,10 @@ namespace Ploom.Models
 
         public static void All()
         {
-            lst.Add(new Furniture("Furniture1", "Furniture Description 1", "5000 P"));
-            lst.Add(new Furniture("Furniture2", "Furniture Description 2", "5000 P"));
-            lst.Add(new Furniture("Furniture3", "Furniture Description 3", "5000 P"));
-            lst.Add(new Furniture("Furniture4", "Furniture Description 4", "5000 P"));
+            lst.Add(new Furniture("Furniture 1", "Furniture Description 1", "5000 P", "Белый", "", "", ""));
+            lst.Add(new Furniture("Furniture 2", "Furniture Description 2", "5000 P", "Белый", "", "", ""));
+            lst.Add(new Furniture("Furniture 3", "Furniture Description 3", "5000 P", "Белый", "", "", ""));
+            lst.Add(new Furniture("Furniture 4", "Furniture Description 4", "5000 P", "Белый", "", "", ""));
         }
     }
 }
