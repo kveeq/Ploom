@@ -15,6 +15,8 @@ namespace Ploom.TabbedPages
         public ReviewsPage()
         {
             InitializeComponent();
+            FirnitureService.All();
+            ReviewsLst.ItemsSource = FirnitureService.lst;
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)

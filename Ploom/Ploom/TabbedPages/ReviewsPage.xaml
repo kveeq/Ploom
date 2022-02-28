@@ -1,28 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ploom.TabbedPages.ReviewsPage" BackgroundColor="#F4F4FF" 
-             NavigationPage.HasNavigationBar="False"
-             Visual="Material">
+<ContentPage
+    x:Class="Ploom.TabbedPages.ReviewsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F4F4FF"
+    NavigationPage.HasNavigationBar="False"
+    Visual="Material">
 
     <StackLayout>
-        <StackLayout BackgroundColor="White" Orientation="Horizontal">
-        <Label
-            Padding="10,20"
-            FontAttributes="None"
-            FontFamily="MaterialIconsFont"
-            FontSize="43"
-            HorizontalOptions="Start"
-            Text="chevron_left"
-            TextColor="Gray"
-            VerticalOptions="Center">
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-            </Label.GestureRecognizers>
-        </Label>
-        <Label Text="Отзывы о приложении" TextColor="Gray" FontSize="20" Margin="10,20"/>
-    </StackLayout>
-        <StackLayout>
+        <StackLayout VerticalOptions="StartAndExpand" BackgroundColor="White" Orientation="Horizontal">
+            <Label
+                Padding="10,20"
+                FontAttributes="None"
+                FontFamily="MaterialIconsFont"
+                FontSize="43"
+                HorizontalOptions="Start"
+                Text="chevron_left"
+                TextColor="Gray"
+                VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Margin="10,20"
+                FontSize="20"
+                Text="Отзывы о приложении"
+                TextColor="Gray" />
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand">
             <ListView
                 x:Name="ReviewsLst"
                 HasUnevenRows="True"
@@ -62,9 +68,18 @@
             </ListView>
         </StackLayout>
 
-        <StackLayout BackgroundColor="White" Orientation="Horizontal" Padding="30" HorizontalOptions="FillAndExpand">
-            <Label Text="Хотите оставить отзыв?"/>
-            <Button BackgroundColor="#F06B6D" Text="Оценить" TextColor="White" HorizontalOptions="EndAndExpand"/>
+        <StackLayout
+            Padding="30"
+            BackgroundColor="White"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            VerticalOptions="EndAndExpand">
+            <Label Text="Хотите оставить отзыв?" />
+            <Button
+                BackgroundColor="#F06B6D"
+                HorizontalOptions="EndAndExpand"
+                Text="Оценить"
+                TextColor="White" />
         </StackLayout>
     </StackLayout>
 </ContentPage>
