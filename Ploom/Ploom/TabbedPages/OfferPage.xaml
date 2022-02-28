@@ -64,7 +64,7 @@
 
         <StackLayout BackgroundColor="White" Orientation="Horizontal" Padding="30" HorizontalOptions="FillAndExpand">
             <Label Text="Есть предложения по улучшению? Тогда напиши его!"/>
-            <Button BackgroundColor="#F06B6D" Text="Написать" TextColor="White" HorizontalOptions="EndAndExpand"/>
+            <Button BackgroundColor="#F06B6D" Text="Написать" TextColor="White" HorizontalOptions="EndAndExpand" Margin="10" Clicked="Button_Clicked"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

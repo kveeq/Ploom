@@ -16,7 +16,6 @@ namespace Ploom.TabbedPages
         {
             InitializeComponent(); FirnitureService.All();
             GoodsFilterLstView.ItemsSource = FirnitureService.lst;
-            //GoodsLstViw2.ItemsSource = FirnitureService.lst;
         }
 
         //private void HomeBtn_Tapped(object sender, EventArgs e)

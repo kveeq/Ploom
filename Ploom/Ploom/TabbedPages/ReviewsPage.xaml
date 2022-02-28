@@ -79,7 +79,8 @@
                 BackgroundColor="#F06B6D"
                 HorizontalOptions="EndAndExpand"
                 Text="Оценить"
-                TextColor="White" />
+                TextColor="White" 
+                Clicked="Button_Clicked"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
