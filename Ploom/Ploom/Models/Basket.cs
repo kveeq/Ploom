@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SQLite;
 
 namespace Ploom.Models
 {
+    [Table("basket")]
     public class Basket
     {
         public Basket()
@@ -17,6 +19,7 @@ namespace Ploom.Models
             FurnitureId = furnitureId;
         }
 
+        [AutoIncrement, PrimaryKey, Column("_id")]
         public int Id { get; set; }
 
         public int Quantity { get; set; }

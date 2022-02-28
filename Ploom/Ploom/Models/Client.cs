@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SQLite;
 
 namespace Ploom.Models
 {
+    [Table("clients")]
     public class Client
     {
         public Client()
@@ -22,6 +24,7 @@ namespace Ploom.Models
             RoleId = roleId;
         }
 
+        [AutoIncrement, PrimaryKey, Column("_id")]
         public int Id { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
@@ -31,6 +34,7 @@ namespace Ploom.Models
 
         public string EMail { get; set; }
 
+        [Unique]
         public string Login { get; set; }
 
         public string Password { get; set; }
