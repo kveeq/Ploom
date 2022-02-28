@@ -59,7 +59,7 @@
 
             <StackLayout HorizontalOptions="CenterAndExpand" Margin="20" Orientation="Horizontal">
                 <Label Text="Ближайшая доставка: В течении 7 дней" FontSize="12" TextColor="Gray"/>
-                <Button Text="ЗАКАЗАТЬ" BackgroundColor="#D37C7E" HorizontalOptions="EndAndExpand" Margin="0,0,30,10" CornerRadius="10"/>
+                <Button Text="ЗАКАЗАТЬ" BackgroundColor="#D37C7E" HorizontalOptions="EndAndExpand" Margin="0,0,30,10" CornerRadius="10" Clicked="Button_Clicked"/>
             </StackLayout>
         </StackLayout>
     </StackLayout>

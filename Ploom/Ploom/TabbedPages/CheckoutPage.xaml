@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ploom.TabbedPages.CheckoutPage" BackgroundColor="#F4F4FF"
+    NavigationPage.HasNavigationBar="False"
+    Visual="Material">
+
+    <StackLayout>
+        <StackLayout BackgroundColor="White">
+            <StackLayout Orientation="Horizontal">
+                <Label
+            Padding="10,20"
+            FontAttributes="None"
+            FontFamily="MaterialIconsFont"
+            FontSize="43"
+            HorizontalOptions="Start"
+            Text="chevron_left"
+            TextColor="Gray"
+            VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Padding="20"
+                        FontSize="24"
+                        Text="Оформление заказа"
+                        TextColor="#887D7D"/>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="Адрес доставки:" TextColor="Black" FontSize="18" Margin="20,10,0,0"/>
+                        <Frame>
+                            <Entry Placeholder="Адрес"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="White">
+                        <Label Text="Получатель заказа:" TextColor="Black" FontSize="18" Margin="20,20,0,0"/>
+                        <Frame>
+                            <Entry Placeholder="ФИО"/>
+                        </Frame>
+                        <Frame>
+                            <Entry Placeholder="Номер телефона" Keyboard="Telephone"/>
+                        </Frame>
+                        <Frame>
+                            <Entry Placeholder="Серия и номер паспорта"/>
+                        </Frame>
+                        <Frame>
+                            <Entry Placeholder="Электронная почта" Keyboard="Email"/>
+                        </Frame>
+                        <Label Text="Мы пришлем уведомление о статусе заказа на указанные вами телефон и e-mail" FontSize="12" Margin="10"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="20,10">
+                        <Label Text="Способ оплаты:" TextColor="Black" FontSize="18" Margin="20,10,0,0"/>
+                        <StackLayout BackgroundColor="#FFF6F6" Padding="20">
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton/>
+                                <Label Text="Картой онлайн или Goolge Pay"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton/>
+                                <Label Text="Наличный расчет"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="Ваш заказ:" TextColor="Black" FontSize="18" Margin="20,30,0,0"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Товары (8):" Margin="20,10"/>
+                                <Label Text="30 000 Р" HorizontalOptions="EndAndExpand" TextColor="Black" Margin="0,0,30,0" FontSize="18"/>
+                            </StackLayout>
+                            
+                            <Frame>
+                                <Label Text="Размещая заказ, вы соглашаетесь на обработку персональных данных в соответствии с Условиями" FontSize="12"/>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" Margin="0,20">
+                                <Label Text="Итого:" TextColor="Black" FontSize="16" Margin="20,0,0,0"/>
+                                <Label Text="30 000 Р" HorizontalOptions="EndAndExpand" TextColor="Black" Margin="0,0,30,0" FontSize="18"/>
+                            </StackLayout>
+                            <Button Text="Заказать" BackgroundColor="#F06B6D" Margin="80,0"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
