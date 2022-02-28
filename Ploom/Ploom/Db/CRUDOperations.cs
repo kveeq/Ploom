@@ -27,16 +27,17 @@ namespace Ploom.Db
         {
             return db.Table<Client>();
         }
-        public IEnumerable<Client> GetBasket()
+        public IEnumerable<Basket> GetBasket()
         {
-            return db.Table<Client>();
+            return db.Table<Basket>();
         }
         public Furniture GetProjectItem(int id)
         {
             return db.Get<Furniture>(id);
         }
 
-        public int DelProj(int id) { return db.Delete<Furniture>(id); }
+        public int DeleteFurnitureInBusket(int id) { return db.Delete<Basket>(id); }
+        public int DeleteFurniture(int id) { return db.Delete<Furniture>(id); }
 
         public int SaveFurniture(Furniture projectModel)
         {

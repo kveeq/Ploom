@@ -6,10 +6,11 @@ namespace Ploom.Models
 {
     public class FirnitureService
     {
-        public static List<Furniture> lst = new List<Furniture>();
+        public static List<Furniture> lst;
 
         public static void All()
         {
+            lst = new List<Furniture>();
             lst.Add(new Furniture("Furniture 1", "Furniture Description 1", "5000 P", "Белый", "", "", ""));
             lst.Add(new Furniture("Furniture 2", "Furniture Description 2", "5000 P", "Белый", "", "", ""));
             lst.Add(new Furniture("Furniture 3", "Furniture Description 3", "5000 P", "Белый", "", "", ""));

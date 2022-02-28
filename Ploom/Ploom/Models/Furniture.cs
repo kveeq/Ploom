@@ -14,6 +14,9 @@ namespace Ploom.Models
 
         public Furniture(string name, string description, string price, string color, string type, string material, string imagePath)
         {
+            Name = name;
+            Description = description;
+            Price = price;
             Color = color;
             Type = type;
             Material = material;
