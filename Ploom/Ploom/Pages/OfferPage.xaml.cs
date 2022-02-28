@@ -21,7 +21,7 @@ namespace Ploom.Pages
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            await Navigation.PopAsync();
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

@@ -14,10 +14,8 @@ namespace Ploom
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : Xamarin.Forms.TabbedPage
     {
-        public static Client client;
-        public Page1(Client clien)
+        public Page1()
         {
-            client = clien;
             InitializeComponent();
             On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }

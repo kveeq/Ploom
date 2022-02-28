@@ -1,4 +1,5 @@
 ﻿using Ploom.Db;
+using Ploom.Models;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -11,6 +12,7 @@ namespace Ploom
     {
         public const string DB_NAME = "FurnitureStore.db";
         public static CRUDOperation db;
+        public static Client client;
         public static CRUDOperation Db
         {
             get

@@ -22,10 +22,20 @@ namespace Ploom
             await Navigation.PopAsync();
         }
 
-        private void RegistrateBtn_Clicked(object sender, EventArgs e)
+        private async void RegistrateBtn_Clicked(object sender, EventArgs e)
         {
-            Client client = new Client();
-            App.Db.SaveClient(client);
+            try
+            {
+                string[] aa = FIOEntry.Text.Split();
+                Client client = new Client(aa[0], aa[1], aa[2], TelNumberEntry.Text, EmailEntry.Text, LoginEntry.Text, PassEntry.Text, 0);
+                App.Db.SaveClient(client);
+                App.client = client;
+                await Navigation.PushModalAsync(new NavigationPage(new Page1()));
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", "Не удалось зарегистрироваться" + ex.Message, "Ok");
+            }
         }
     }
 }

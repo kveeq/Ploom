@@ -15,6 +15,7 @@ namespace Ploom.TabbedPages
         public ProfilPage()
         {
             InitializeComponent();
+            AccountInfoLbl.Text = $"{App.client.Surname} {App.client.Name} {App.client.Patronymic} {App.client.TelephoneNumber}";
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)

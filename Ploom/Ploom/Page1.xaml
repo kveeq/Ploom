@@ -17,6 +17,6 @@
     <local:HomePage Title="Главная" IconImageSource="Homei.ico" />
     <local:SearchPage Title="Поиск" IconImageSource="search.ico" />
     <local:BusketPage Title="Корзина" IconImageSource="Basket.ico" />
-    <local:ProfilPage Title="Профиль" IconImageSource="Profil.ico" BindingContext="{x:Static lo:Page1.client}"/>
+    <local:ProfilPage Title="Профиль" IconImageSource="Profil.ico" BindingContext="{x:Static lo:App.client}"/>
 
 </TabbedPage>

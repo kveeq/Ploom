@@ -33,7 +33,9 @@ namespace Ploom
                     if (item.Password == PassLbl.Text)
                     {
                         state = true;
-                        await Navigation.PushModalAsync(new NavigationPage(new Page1(item)));
+                        App.client = item;
+                        await Navigation.PushModalAsync(new NavigationPage(new Page1()));
+
                     }
                 }
             }
