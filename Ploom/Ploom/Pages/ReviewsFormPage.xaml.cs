@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Ploom.TabbedPages
+namespace Ploom.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CheckoutPage : ContentPage
+    public partial class ReviewsFormPage : ContentPage
     {
-        public CheckoutPage()
+        public ReviewsFormPage()
         {
             InitializeComponent();
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new BusketPage());
+            await Navigation.PopAsync();
         }
     }
 }

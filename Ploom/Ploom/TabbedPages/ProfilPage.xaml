@@ -43,13 +43,16 @@
                     Text="&#xe0b7;"
                     TextColor="#ADA7A7"
                     VerticalOptions="CenterAndExpand" />
-                <Button BackgroundColor="White"
+                <Label
+                    BackgroundColor="White"
                     FontSize="18"
                     HorizontalOptions="StartAndExpand"
                     Text="Предложения для улучшения"
                     TextColor="#ADA7A7"
-                        Clicked="Button_Clicked"
                     VerticalOptions="CenterAndExpand" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </StackLayout.GestureRecognizers>
             </StackLayout>
             <StackLayout
                 Margin="0"
@@ -63,15 +66,15 @@
                     Text="&#xe0ca;"
                     TextColor="#ADA7A7"
                     VerticalOptions="CenterAndExpand" />
-                <Button BackgroundColor="White" 
+                <Label
+                    BackgroundColor="White"
                     FontSize="18"
                     HorizontalOptions="StartAndExpand"
                     Text="Отзывы"
                     TextColor="#ADA7A7"
-                        Clicked="Button_Clicked_1"
                     VerticalOptions="CenterAndExpand" />
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                 </StackLayout.GestureRecognizers>
             </StackLayout>
         </StackLayout>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Ploom.Pages.ReviewsFormPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F4F4FF"
+    NavigationPage.HasNavigationBar="False"
+    Visual="Material">
+
+
+    <StackLayout>
+        <StackLayout BackgroundColor="White" Orientation="Horizontal">
+            <Label
+                Padding="10,20"
+                FontAttributes="None"
+                FontFamily="MaterialIconsFont"
+                FontSize="43"
+                HorizontalOptions="Start"
+                Text="chevron_left"
+                TextColor="Gray"
+                VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Margin="10,20"
+                FontSize="20"
+                Text="Оставить отзыв"
+                TextColor="Gray" />
+        </StackLayout>
+
+        <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand">
+            <StackLayout Margin="30" Orientation="Horizontal">
+                <Image
+                    HeightRequest="100"
+                    Source="profiljpg.jpg"
+                    WidthRequest="100" />
+                <Label
+                    Margin="30"
+                    Text="ОБЩАЯ ОЦЕНКА"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+            <Frame
+                Margin="30"
+                BorderColor="Gray"
+                CornerRadius="10"
+                HeightRequest="400">
+                <Editor
+                    BackgroundColor="White"
+                    Placeholder="Напишите отзыв..."
+                    PlaceholderColor="Gray" />
+            </Frame>
+
+            <Button
+                Margin="10,0,30,20"
+                BackgroundColor="#F06B6D"
+                HorizontalOptions="EndAndExpand"
+                Text="Отправить" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

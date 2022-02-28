@@ -7,7 +7,7 @@ using Ploom.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Ploom.TabbedPages
+namespace Ploom.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OfferPage : ContentPage
@@ -21,7 +21,7 @@ namespace Ploom.TabbedPages
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page1());
+            await Navigation.PopModalAsync();
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

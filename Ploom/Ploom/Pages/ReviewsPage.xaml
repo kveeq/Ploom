@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="Ploom.TabbedPages.ReviewsPage"
+    x:Class="Ploom.Pages.ReviewsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundColor="#F4F4FF"
@@ -8,7 +8,10 @@
     Visual="Material">
 
     <StackLayout>
-        <StackLayout VerticalOptions="StartAndExpand" BackgroundColor="White" Orientation="Horizontal">
+        <StackLayout
+            BackgroundColor="White"
+            Orientation="Horizontal"
+            VerticalOptions="StartAndExpand">
             <Label
                 Padding="10,20"
                 FontAttributes="None"
@@ -77,10 +80,10 @@
             <Label Text="Хотите оставить отзыв?" />
             <Button
                 BackgroundColor="#F06B6D"
+                Clicked="Button_Clicked"
                 HorizontalOptions="EndAndExpand"
                 Text="Оценить"
-                TextColor="White" 
-                Clicked="Button_Clicked"/>
+                TextColor="White" />
         </StackLayout>
     </StackLayout>
 </ContentPage>

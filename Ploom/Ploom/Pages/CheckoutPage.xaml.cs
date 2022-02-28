@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Ploom.TabbedPages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Ploom.TabbedPages
+namespace Ploom.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OfferFormPage : ContentPage
+    public partial class CheckoutPage : ContentPage
     {
-        public OfferFormPage()
+        public CheckoutPage()
         {
             InitializeComponent();
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new OfferPage());
+            await Navigation.PopAsync();
         }
     }
 }
