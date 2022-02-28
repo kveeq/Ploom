@@ -19,10 +19,10 @@ namespace Ploom.TabbedPages
             //GoodsLstViw2.ItemsSource = FirnitureService.lst;
         }
 
-        private void HomeBtn_Tapped(object sender, EventArgs e)
-        {
+        //private void HomeBtn_Tapped(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void CleanAllBtnBoxViews()
         {
@@ -56,10 +56,29 @@ namespace Ploom.TabbedPages
             }
         }
 
-        private void ColorBtn_Clicked(object sender, EventArgs e)
+        private async void ColorBtn_Clicked(object sender, EventArgs e)
         {
             CleanAllBtnBoxViews();
             ColorBoxVw.IsVisible = true;
+
+            string result = await DisplayActionSheet("Выберите цвет:", null, null, "Серый", "Фиолетовый", "Желтый", "Красный");
+
+            switch (result)
+            {
+                case "Серый":
+
+                    break;
+
+                case "Фиолетовый":
+                    break;
+
+                case "Желтый":
+                    break;
+
+                case "Красный":
+                    break;
+
+            }
         }
 
         private async void ProductBtn_Clicked(object sender, EventArgs e)

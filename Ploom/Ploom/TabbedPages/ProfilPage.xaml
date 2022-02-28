@@ -43,11 +43,12 @@
                     Text="&#xe0b7;"
                     TextColor="#ADA7A7"
                     VerticalOptions="CenterAndExpand" />
-                <Label
+                <Button BackgroundColor="White"
                     FontSize="18"
                     HorizontalOptions="StartAndExpand"
                     Text="Предложения для улучшения"
                     TextColor="#ADA7A7"
+                        Clicked="Button_Clicked"
                     VerticalOptions="CenterAndExpand" />
             </StackLayout>
             <StackLayout
@@ -62,11 +63,12 @@
                     Text="&#xe0ca;"
                     TextColor="#ADA7A7"
                     VerticalOptions="CenterAndExpand" />
-                <Label
+                <Button BackgroundColor="White" 
                     FontSize="18"
                     HorizontalOptions="StartAndExpand"
                     Text="Отзывы"
                     TextColor="#ADA7A7"
+                        Clicked="Button_Clicked_1"
                     VerticalOptions="CenterAndExpand" />
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>

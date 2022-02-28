@@ -14,7 +14,7 @@
             FontFamily="MaterialIconsFont"
             FontSize="43"
             HorizontalOptions="Start"
-            Text="&#xe317;"
+            Text="chevron_left"
             TextColor="White"
             VerticalOptions="Center">
             <Label.GestureRecognizers>
