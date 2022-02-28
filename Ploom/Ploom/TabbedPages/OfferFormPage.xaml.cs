@@ -17,9 +17,9 @@ namespace Ploom.TabbedPages
             InitializeComponent();
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new OfferPage());
         }
     }
 }

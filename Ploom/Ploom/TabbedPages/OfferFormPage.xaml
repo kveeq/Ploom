@@ -17,7 +17,7 @@
             TextColor="Gray"
             VerticalOptions="Center">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                 </Label.GestureRecognizers>
             </Label>
             <Label Text="Предложения" TextColor="Gray" FontSize="20" Margin="10,20"/>

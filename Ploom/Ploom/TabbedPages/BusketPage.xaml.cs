@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Ploom.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,8 @@ namespace Ploom.TabbedPages
         public BusketPage()
         {
             InitializeComponent();
+            FirnitureService.All();
+            BusketLst.ItemsSource = FirnitureService.lst;
         }
     }
 }
