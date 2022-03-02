@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Ploom.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,9 +15,25 @@ namespace Ploom.Pages
     public partial class AddFurniturePage : ContentPage
     {
         string path;
+        bool state;
+        Furniture furniture;
         public AddFurniturePage()
         {
             InitializeComponent();
+            BarLbl.Text = "Добавление мебели";
+            state = true;
+        }
+        public AddFurniturePage(Furniture fur)
+        {
+            furniture = fur;
+            InitializeComponent();
+            NameFurniture.Text = furniture.Name;
+            DescriptionFurniture.Text = furniture.Description;
+            PriceFurniture.Text = furniture.Price;
+            TypeFurniture.Text = furniture.Type;
+            MaterialFurniture.Text = furniture.Material;
+            BarLbl.Text = "Редактирование";
+            state = false;
         }
 
         private async void RegistrateBtn_Clicked(object sender, EventArgs e)
@@ -43,8 +60,19 @@ namespace Ploom.Pages
 
         private async void SaveBtn_Clicked(object sender, EventArgs e)
         {
-           App.Db.SaveFurniture(new Models.Furniture(NameFurniture.Text, DescriptionFurniture.Text, PriceFurniture.Text, ColorFurniture.Text, TypeFurniture.Text, MaterialFurniture.Text, path));
-           await Navigation.PopAsync();
+            if (state)
+                App.Db.SaveFurniture(new Furniture(NameFurniture.Text, DescriptionFurniture.Text, PriceFurniture.Text, "", TypeFurniture.Text, MaterialFurniture.Text, path));
+            else
+            {
+                furniture.ImagePath = path;
+                App.Db.SaveFurniture(furniture);
+            }
+            await Navigation.PopAsync();
+        }
+
+        private async void BackLbl_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

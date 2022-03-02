@@ -16,8 +16,8 @@ namespace Ploom.TabbedPages
         public BusketPage()
         {
             InitializeComponent();
-            FirnitureService.All();
-            BusketLst.ItemsSource = FirnitureService.lst;
+            //FirnitureService.All();
+            //BusketLst.ItemsSource = FirnitureService.lst;
             BusketLst.RefreshCommand = new Command(() =>
             {
                 BusketLst.IsRefreshing = false; //выключить анимацию обновления 
@@ -33,7 +33,15 @@ namespace Ploom.TabbedPages
         {
             //imgList.ItemsSource = Directory.GetFiles(folderPath).Select(f => Path.GetFullPath(f));
             BusketLst.ItemsSource = null;
-            BusketLst.ItemsSource = App.Db.GetBasket();
+            List<Furniture> aa = new List<Furniture>();
+            var a = App.Db.GetBasket();
+            foreach (var item in a)
+            {
+                if (App.client.Id == item.ClientId)
+                    aa.Add(App.Db.GetProjectItem(item.FurnitureId));
+            }
+
+            BusketLst.ItemsSource = aa;
         }
 
         private void SwipeItem_Clicked(object sender, EventArgs e)

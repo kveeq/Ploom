@@ -12,7 +12,7 @@ namespace Ploom.Models
         {
         }
 
-        public Order(int amount, string date, Basket basketId)
+        public Order(int amount, string date, int basketId)
         {
             Amount = amount;
             Date = date;
@@ -23,6 +23,6 @@ namespace Ploom.Models
         public int Id { get; set; }
         public int Amount { get; set; }
         public string Date { get; set; }
-        public Basket BasketId { get; set; }
+        public int BasketId { get; set; }
     }
 }

@@ -6,25 +6,25 @@
     <StackLayout>
         <Frame Margin="0" Padding="0">
             <StackLayout>
-                <StackLayout 
-                    Orientation="Horizontal"
-                    VerticalOptions="StartAndExpand">
+                <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
                     <Label
                         Padding="20"
                         FontSize="24"
                         Text="Товары"
                         TextColor="#887D7D" />
                     <StackLayout
+                        x:Name="AdminPanel"
+                        Margin="0,0,25,0"
                         HorizontalOptions="EndAndExpand"
-                        Orientation="Horizontal"
-                        Margin="0,0,25,0">
+                        IsVisible="False"
+                        Orientation="Horizontal">
                         <Label
                             FontFamily="MaterialIconsFont"
                             FontSize="Title"
                             HorizontalOptions="EndAndExpand"
-                            VerticalOptions="Center"
                             Text="&#xe145;"
-                            TextColor="#887D7D">
+                            TextColor="#887D7D"
+                            VerticalOptions="Center">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                             </Label.GestureRecognizers>
@@ -104,6 +104,7 @@
                 x:Name="GoodsLstViw"
                 HasUnevenRows="True"
                 HorizontalOptions="StartAndExpand"
+                ItemTapped="GoodsLstViw_ItemTapped"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>

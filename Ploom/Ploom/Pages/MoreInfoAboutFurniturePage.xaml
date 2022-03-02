@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Ploom.Pages.MoreInfoAboutFurniturePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <StackLayout Spacing="0">
+            <StackLayout BackgroundColor="White" Orientation="Horizontal">
+                <Label
+                    Padding="10,20"
+                    FontAttributes="None"
+                    FontFamily="MaterialIconsFont"
+                    FontSize="43"
+                    HorizontalOptions="Start"
+                    Text="chevron_left"
+                    TextColor="Gray"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="BackBtn" Tapped="BackBtn_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <StackLayout
+                    x:Name="AdminPanel"
+                    Padding="0,0,10,0"
+                    BackgroundColor="White"
+                    HorizontalOptions="EndAndExpand"
+                    IsVisible="False"
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        FontFamily="MaterialIconsFont"
+                        FontSize="27"
+                        Text="edit">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="EditBtn" Tapped="EditBtn_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label
+                        FontFamily="MaterialIconsFont"
+                        FontSize="27"
+                        Text="delete">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="deleteBtn" Tapped="deleteBtn_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout BackgroundColor="White">
+                <Image
+                    HeightRequest="200"
+                    Source="{Binding ImagePath}"
+                    WidthRequest="200" />
+            </StackLayout>
+
+            <StackLayout
+                Margin="0,10,0,0"
+                Padding="20,10,0,0"
+                BackgroundColor="White">
+                <Label
+                    FontSize="24"
+                    Text="{Binding Name}"
+                    TextColor="#433939" />
+                <Label
+                    FontSize="11"
+                    Text="Выбрать цвет"
+                    TextColor="#433939" />
+                <StackLayout Orientation="Horizontal">
+                    <Button
+                        x:Name="Btn1"
+                        BackgroundColor="#E2DAD7"
+                        Clicked="Btn1_Clicked"
+                        CornerRadius="50"
+                        HeightRequest="30"
+                        WidthRequest="30" />
+                    <Button
+                        x:Name="Btn2"
+                        BackgroundColor="#8B8DC0"
+                        Clicked="Btn2_Clicked"
+                        CornerRadius="50"
+                        HeightRequest="30"
+                        WidthRequest="30" />
+                    <Button
+                        x:Name="Btn3"
+                        BackgroundColor="#D37C7E"
+                        Clicked="Btn3_Clicked"
+                        CornerRadius="50"
+                        HeightRequest="30"
+                        WidthRequest="30" />
+                    <Button
+                        x:Name="Btn4"
+                        BackgroundColor="#FCC046"
+                        Clicked="Btn4_Clicked"
+                        CornerRadius="50"
+                        HeightRequest="30"
+                        WidthRequest="30" />
+                </StackLayout>
+
+                <Label
+                    FontSize="11"
+                    Text="Выбор материала"
+                    TextColor="#433939" />
+                <StackLayout>
+                    <RadioButton
+                        x:Name="RBtn1"
+                        Content="Искусственная кожа"
+                        FontSize="14"
+                        TextColor="#888686" />
+                    <RadioButton
+                        x:Name="RBtn2"
+                        Content="Искусственный мех"
+                        FontSize="14"
+                        TextColor="#888686" />
+                    <RadioButton
+                        x:Name="RBtn3"
+                        Content="Еще какой то материал"
+                        FontSize="14"
+                        TextColor="#888686" />
+                </StackLayout>
+                <Label
+                    FontSize="11"
+                    Text="Цена"
+                    TextColor="#433939" />
+
+                <Label
+                    FontSize="14"
+                    Text="{Binding Price}"
+                    TextColor="#D37C7E" />
+
+                <Label
+                    FontSize="11"
+                    Text="Описание товара"
+                    TextColor="#433939" />
+                <Label
+                    FontSize="13"
+                    Text="{Binding Description}"
+                    TextColor="#9A9A9A" />
+            </StackLayout>
+            <StackLayout
+                Margin="0,10,0,0"
+                Padding="20,0"
+                BackgroundColor="White"
+                Orientation="Horizontal">
+                <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label
+                        FontSize="14"
+                        Text="Цена"
+                        TextColor="#433939" />
+                    <Label
+                        FontSize="18"
+                        Text="{Binding Price}"
+                        TextColor="#D37C7E" />
+                </StackLayout>
+                <Button
+                    x:Name="ForBasketBtn"
+                    Margin="0,10"
+                    Padding="20,7"
+                    BackgroundColor="#F06B6D"
+                    Clicked="ForBasketBtn_Clicked"
+                    CornerRadius="5"
+                    HorizontalOptions="EndAndExpand"
+                    Text="В корзину"
+                    TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

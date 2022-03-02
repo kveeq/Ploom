@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ploom.Pages.AddFurniturePage"
-             NavigationPage.HasNavigationBar="False"
-             BackgroundImageSource="image.png">
+<ContentPage
+    x:Class="Ploom.Pages.AddFurniturePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundImageSource="image.png"
+    NavigationPage.HasNavigationBar="False">
     <ScrollView>
-            <StackLayout>
-                <StackLayout Orientation="Horizontal">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
                 <Label
                     Padding="10,20"
                     FontAttributes="None"
@@ -17,10 +18,11 @@
                     TextColor="Black"
                     VerticalOptions="Center">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="BackLbl" />
+                        <TapGestureRecognizer x:Name="BackLbl" Tapped="BackLbl_Tapped" />
                     </Label.GestureRecognizers>
                 </Label>
                 <Label
+                    x:Name="BarLbl"
                     Margin="0,0,43,0"
                     FontSize="24"
                     HorizontalOptions="CenterAndExpand"
@@ -62,13 +64,6 @@
                     </Frame>
                     <Frame Padding="0" IsClippedToBounds="True">
                         <Entry
-                            x:Name="ColorFurniture"
-                            BackgroundColor="White"
-                            Placeholder="Цвет"
-                            PlaceholderColor="#ACACAC" />
-                    </Frame>
-                    <Frame Padding="0" IsClippedToBounds="True">
-                        <Entry
                             x:Name="TypeFurniture"
                             BackgroundColor="White"
                             Placeholder="Тип мебели"
@@ -83,9 +78,7 @@
                     </Frame>
                 </StackLayout>
             </Frame>
-            <StackLayout
-                Margin="20,0,20,0"
-                Orientation="Horizontal">
+            <StackLayout Margin="20,0,20,0" Orientation="Horizontal">
                 <Button
                     x:Name="RegistrateBtn"
                     Margin="0,0,0,20"

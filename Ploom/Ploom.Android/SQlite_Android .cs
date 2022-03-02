@@ -15,9 +15,8 @@ using System.Text;
 
 namespace Ploom.Droid
 {
-    class SQlite_Android
+    class SQlite_Android : ISqlite
     {
-        public SQlite_Android() { }
         public string GetDatabasePath(string filename)
         {
             string documentPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);

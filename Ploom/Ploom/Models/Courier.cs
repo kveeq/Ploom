@@ -12,13 +12,13 @@ namespace Ploom.Models
         {
         }
 
-        public Courier(string surname, string name, string patronymic, string telephone, Delivery delivery)
+        public Courier(string surname, string name, string patronymic, string telephone, int delivery)
         {
             Surname = surname;
             Name = name;
             Patronymic = patronymic;
             Telephone = telephone;
-            Delivery = delivery;
+            DeliveryId = delivery;
         }
 
         [AutoIncrement, PrimaryKey, Column("_id")]
@@ -31,6 +31,6 @@ namespace Ploom.Models
 
         public string Telephone { get; set; }
         [Unique]
-        public Delivery Delivery { get; set; }
+        public int DeliveryId { get; set; }
     }
 }

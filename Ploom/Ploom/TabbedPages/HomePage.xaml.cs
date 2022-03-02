@@ -20,6 +20,15 @@ namespace Ploom.TabbedPages
             GoodsLstViw.ItemsSource = App.Db.GetFurnituress();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (App.client.RoleId == 0)
+                AdminPanel.IsVisible = false;
+            else if (App.client.RoleId == 1)
+                AdminPanel.IsVisible = true;
+        }
+
         private void HomeBtn_Tapped(object sender, EventArgs e)
         {
 
@@ -60,6 +69,14 @@ namespace Ploom.TabbedPages
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddFurniturePage());
+        }
+
+        private async void GoodsLstViw_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var d = (Furniture)e.Item;
+            var a = new MoreInfoAboutFurniturePage(d);
+            a.BindingContext = d;
+            await Navigation.PushAsync(a);
         }
     }
 }

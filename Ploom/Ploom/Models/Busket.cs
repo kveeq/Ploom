@@ -1,18 +1,19 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using SQLite;
 
 namespace Ploom.Models
 {
-    [Table("basket")]
-    public class Basket
+    [Table("busket")]
+    public class Busket
     {
-        public Basket()
+        public Busket()
         {
+
         }
 
-        public Basket(int quantity, Client clientId, Furniture furnitureId)
+        public Busket(int quantity, int clientId, int furnitureId)
         {
             Quantity = quantity;
             ClientId = clientId;
@@ -24,7 +25,7 @@ namespace Ploom.Models
 
         public int Quantity { get; set; }
 
-        public Client ClientId { get; set; }
-        public Furniture FurnitureId { get; set; }
+        public int ClientId { get; set; }
+        public int FurnitureId { get; set; }
     }
 }

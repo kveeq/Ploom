@@ -12,12 +12,12 @@ namespace Ploom.Db
         public CRUDOperation(string databasePath)
         {
             db = new SQLiteConnection(databasePath);
+            db.CreateTable<Busket>();
             db.CreateTable<Furniture>();
             db.CreateTable<Client>();
-            //db.CreateTable<Basket>();
-            //db.CreateTable<Order>();
-            //db.CreateTable<Courier>();
-            //db.CreateTable<Delivery>();
+            db.CreateTable<Order>();
+            db.CreateTable<Courier>();
+            db.CreateTable<Delivery>();
         }
         public IEnumerable<Furniture> GetFurnituress()
         {
@@ -27,16 +27,16 @@ namespace Ploom.Db
         {
             return db.Table<Client>();
         }
-        public IEnumerable<Basket> GetBasket()
+        public IEnumerable<Busket> GetBasket()
         {
-            return db.Table<Basket>();
+            return db.Table<Busket>();
         }
         public Furniture GetProjectItem(int id)
         {
             return db.Get<Furniture>(id);
         }
 
-        public int DeleteFurnitureInBusket(int id) { return db.Delete<Basket>(id); }
+        public int DeleteFurnitureInBusket(int id) { return db.Delete<Busket>(id); }
         public int DeleteFurniture(int id) { return db.Delete<Furniture>(id); }
 
         public int SaveFurniture(Furniture projectModel)
@@ -52,7 +52,7 @@ namespace Ploom.Db
             }
         }
 
-        public int SaveBasket(Basket projectModel)
+        public int SaveBasket(Busket projectModel)
         {
             if (projectModel.Id != 0)
             {

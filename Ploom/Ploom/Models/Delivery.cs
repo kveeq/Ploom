@@ -10,14 +10,15 @@ namespace Ploom.Models
     {
         public Delivery()
         {
+
         }
 
-        public Delivery(string deliveryDate, string expectedDeliveryDate, Order order, List<Courier> courier)
+        public Delivery(string deliveryDate, string expectedDeliveryDate, int order)
         {
             DeliveryDate = deliveryDate;
             ExpectedDeliveryDate = expectedDeliveryDate;
             Order = order;
-            Courier = courier;
+            //CourierIds = courier;
         }
 
         [AutoIncrement, PrimaryKey, Column("_id")]
@@ -25,8 +26,8 @@ namespace Ploom.Models
         public string DeliveryDate { get; set; }
         public string ExpectedDeliveryDate { get; set; }
         [Unique]
-        public Order Order { get; set; }
-        public List<Courier> Courier { get; set; }
+        public int Order { get; set; }
+        //public List<int> CourierIds { get; set; }
 
     }
 }
