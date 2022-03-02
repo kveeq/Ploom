@@ -18,6 +18,7 @@
                 x:Name="BusketLst"
                 HasUnevenRows="True"
                 HorizontalOptions="StartAndExpand"
+                IsPullToRefreshEnabled="True"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -26,6 +27,7 @@
                                 <SwipeView.RightItems>
                                     <SwipeItems>
                                         <SwipeItem
+                                            x:Name="cc"
                                             BackgroundColor="Red"
                                             Clicked="SwipeItem_Clicked"
                                             CommandParameter="{Binding Id}"
@@ -37,7 +39,7 @@
                                         <StackLayout Orientation="Horizontal">
                                             <Image
                                                 HeightRequest="100"
-                                                Source="qq"
+                                                Source="{Binding ImagePath}"
                                                 WidthRequest="100" />
                                             <StackLayout HorizontalOptions="FillAndExpand">
                                                 <Label
@@ -97,10 +99,12 @@
                 TextColor="Black" />
             <StackLayout Orientation="Horizontal">
                 <Label
+                    x:Name="GoodAmountLbl"
                     Margin="20,10,0,0"
                     FontSize="18"
                     Text="Товара (8):" />
                 <Label
+                    x:Name="GoodPriceLbl"
                     Margin="0,0,50,0"
                     FontSize="18"
                     HorizontalOptions="EndAndExpand"

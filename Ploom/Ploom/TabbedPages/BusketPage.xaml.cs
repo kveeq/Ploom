@@ -35,13 +35,19 @@ namespace Ploom.TabbedPages
             BusketLst.ItemsSource = null;
             List<Furniture> aa = new List<Furniture>();
             var a = App.Db.GetBasket();
+            int price = 0;
+            //var aff = App.Db.GetBasket().Select(f => f).Where(x => x.ClientId == App.client.Id);
             foreach (var item in a)
             {
                 if (App.client.Id == item.ClientId)
+                {
                     aa.Add(App.Db.GetProjectItem(item.FurnitureId));
+                    price += int.Parse(App.Db.GetProjectItem(item.FurnitureId).Price);
+                }
             }
-
             BusketLst.ItemsSource = aa;
+            GoodAmountLbl.Text = $"Товара ({aa.Count}):";
+            GoodPriceLbl.Text = $"{price} P";
         }
 
         private void SwipeItem_Clicked(object sender, EventArgs e)
@@ -49,7 +55,16 @@ namespace Ploom.TabbedPages
             try
             {
                 var id = ((SwipeItem)sender).CommandParameter.ToString();
-                App.Db.DeleteFurnitureInBusket(int.Parse(id));
+                var fre = App.Db.GetBasket();
+
+                foreach (var item in fre)
+                {
+                    if (item.FurnitureId == int.Parse(id))
+                    {
+                        App.Db.DeleteFurnitureInBusket(item.Id);
+                        break;
+                    }
+                }
                 UpdateList();
             }
             catch (Exception ex)

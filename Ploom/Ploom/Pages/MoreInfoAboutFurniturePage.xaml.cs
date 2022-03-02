@@ -98,7 +98,7 @@ namespace Ploom.Pages
 
         private void deleteBtn_Tapped(object sender, EventArgs e)
         {
-
+            App.Db.DeleteFurniture(furniture.Id);
         }
     }
 }
