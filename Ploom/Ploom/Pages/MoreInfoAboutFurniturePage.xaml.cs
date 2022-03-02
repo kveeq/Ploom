@@ -33,7 +33,7 @@ namespace Ploom.Pages
             Clear();
             Btn1.BorderWidth = 2;
             Btn1.BorderColor = Color.Black;
-            furniture.Color = "White";
+            furniture.Color = App.colors[0];
         }
 
         private void Btn2_Clicked(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace Ploom.Pages
             Clear();
             Btn2.BorderWidth = 2;
             Btn2.BorderColor = Color.Black;
-            furniture.Color = "Purple";
+            furniture.Color = App.colors[1];
         }
 
         private void Btn3_Clicked(object sender, EventArgs e)
@@ -49,14 +49,14 @@ namespace Ploom.Pages
             Clear();
             Btn3.BorderWidth = 2;
             Btn3.BorderColor = Color.Black;
-            furniture.Color = "Red";
+            furniture.Color = App.colors[2];
         }
 
         private void Btn4_Clicked(object sender, EventArgs e)
         {
             Clear();
             Btn4.BorderWidth = 2;
-            furniture.Color = "Yellow";
+            furniture.Color = App.colors[3];
             Btn4.BorderColor = Color.Black;
         }
 
@@ -81,6 +81,8 @@ namespace Ploom.Pages
                 material = RBtn2.Content.ToString();
             else if (RBtn3.IsChecked)
                 material = RBtn3.Content.ToString();
+            else if (RBtn4.IsChecked)
+                material = RBtn4.Content.ToString();
             furniture.Material = material;
             Busket bk = new Busket(1, App.client.Id, furniture.Id);
             App.Db.SaveBasket(bk);

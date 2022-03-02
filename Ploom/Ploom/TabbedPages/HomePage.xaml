@@ -104,6 +104,7 @@
                 x:Name="GoodsLstViw"
                 HasUnevenRows="True"
                 HorizontalOptions="StartAndExpand"
+                IsPullToRefreshEnabled="True"
                 ItemTapped="GoodsLstViw_ItemTapped"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>

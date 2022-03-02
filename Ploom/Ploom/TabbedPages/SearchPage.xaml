@@ -22,9 +22,11 @@
                     Padding="0"
                     CornerRadius="7">
                     <SearchBar
+                        x:Name="searchBar"
                         IsSpellCheckEnabled="True"
                         Placeholder="Search"
                         PlaceholderColor="#DBDBDB"
+                        TextChanged="searchBar_TextChanged"
                         TextColor="Gray" />
                 </Frame>
                 <StackLayout

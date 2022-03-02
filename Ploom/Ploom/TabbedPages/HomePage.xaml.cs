@@ -17,7 +17,27 @@ namespace Ploom.TabbedPages
         {
             InitializeComponent();
             //FirnitureService.All();
-            GoodsLstViw.ItemsSource = App.Db.GetFurnituress();
+            Update();
+            GoodsLstViw.RefreshCommand = new Command(() =>
+            {
+                Update();
+                GoodsLstViw.IsRefreshing = false; //выключить анимацию обновления 
+
+            });
+        }
+
+        private void Update()
+        {
+            GoodsLstViw.ItemsSource = null;
+
+            if (ChairBoxVw.IsVisible)
+                GoodsLstViw.ItemsSource = App.Db.GetFurnituress().Select(f => f).Where(x => x.Type == App.types[0]);
+            else if (TableBoxVw.IsVisible)
+                GoodsLstViw.ItemsSource = App.Db.GetFurnituress().Select(f => f).Where(x => x.Type == App.types[1]);
+            else if (ComodBoxVw.IsVisible)
+                GoodsLstViw.ItemsSource = App.Db.GetFurnituress().Select(f => f).Where(x => x.Type == App.types[2]);
+            else if (CupboardBoxVw.IsVisible)
+                GoodsLstViw.ItemsSource = App.Db.GetFurnituress().Select(f => f).Where(x => x.Type == App.types[3]);
         }
 
         protected override void OnAppearing()
@@ -29,33 +49,32 @@ namespace Ploom.TabbedPages
                 AdminPanel.IsVisible = true;
         }
 
-        private void HomeBtn_Tapped(object sender, EventArgs e)
-        {
-
-        }
-
         private void ChairBtn_Clicked(object sender, EventArgs e)
         {
             CleanAllBtnBoxViews();
             ChairBoxVw.IsVisible = true;
+            Update();
         }
 
         private void TableBtn_Clicked(object sender, EventArgs e)
         {
             CleanAllBtnBoxViews();
             TableBoxVw.IsVisible = true;
+            Update();
         }
 
         private void ComodBtn_Clicked(object sender, EventArgs e)
         {
             CleanAllBtnBoxViews();
             ComodBoxVw.IsVisible = true;
+            Update();
         }
 
         private void cupboard_Clicked(object sender, EventArgs e)
         {
             CleanAllBtnBoxViews();
             CupboardBoxVw.IsVisible = true;
+            Update();
         }
 
         private void CleanAllBtnBoxViews()

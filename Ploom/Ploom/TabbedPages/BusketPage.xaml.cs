@@ -13,6 +13,8 @@ namespace Ploom.TabbedPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BusketPage : ContentPage
     {
+        List<Furniture> aa = new List<Furniture>();
+        int price = 0;
         public BusketPage()
         {
             InitializeComponent();
@@ -31,11 +33,11 @@ namespace Ploom.TabbedPages
         }
         void UpdateList()
         {
+            aa = new List<Furniture>();
+            price = 0;
             //imgList.ItemsSource = Directory.GetFiles(folderPath).Select(f => Path.GetFullPath(f));
             BusketLst.ItemsSource = null;
-            List<Furniture> aa = new List<Furniture>();
             var a = App.Db.GetBasket();
-            int price = 0;
             //var aff = App.Db.GetBasket().Select(f => f).Where(x => x.ClientId == App.client.Id);
             foreach (var item in a)
             {
@@ -75,7 +77,7 @@ namespace Ploom.TabbedPages
 
         private async void OrderBtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CheckoutPage());
+            await Navigation.PushAsync(new CheckoutPage(aa.Count, price));
         }
     }
 }

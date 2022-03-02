@@ -48,16 +48,22 @@
                             Text="Получатель заказа:"
                             TextColor="Black" />
                         <Frame>
-                            <Entry Placeholder="ФИО" />
+                            <Entry x:Name="FIOEntry" Placeholder="ФИО" />
                         </Frame>
                         <Frame>
-                            <Entry Keyboard="Telephone" Placeholder="Номер телефона" />
+                            <Entry
+                                Keyboard="Telephone"
+                                Placeholder="Номер телефона"
+                                Text="{Binding TelephoneNumber}" />
                         </Frame>
                         <Frame>
                             <Entry Placeholder="Серия и номер паспорта" />
                         </Frame>
                         <Frame>
-                            <Entry Keyboard="Email" Placeholder="Электронная почта" />
+                            <Entry
+                                Keyboard="Email"
+                                Placeholder="Электронная почта"
+                                Text="{Binding EMail}" />
                         </Frame>
                         <Label
                             Margin="10"
@@ -82,8 +88,12 @@
                                 Text="Ваш заказ:"
                                 TextColor="Black" />
                             <StackLayout Orientation="Horizontal">
-                                <Label Margin="20,10" Text="Товары (8):" />
                                 <Label
+                                    x:Name="AmountLbl"
+                                    Margin="20,10"
+                                    Text="Товары (8):" />
+                                <Label
+                                    x:Name="SumLbl"
                                     Margin="0,0,30,0"
                                     FontSize="18"
                                     HorizontalOptions="EndAndExpand"
@@ -101,6 +111,7 @@
                                     Text="Итого:"
                                     TextColor="Black" />
                                 <Label
+                                    x:Name="SumLbl1"
                                     Margin="0,0,30,0"
                                     FontSize="18"
                                     HorizontalOptions="EndAndExpand"
@@ -108,8 +119,10 @@
                                     TextColor="Black" />
                             </StackLayout>
                             <Button
+                                x:Name="OrderBtn"
                                 Margin="80,0"
                                 BackgroundColor="#F06B6D"
+                                Clicked="OrderBtn_Clicked"
                                 Text="Заказать" />
                         </StackLayout>
                     </StackLayout>

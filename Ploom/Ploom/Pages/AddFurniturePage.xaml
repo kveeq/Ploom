@@ -63,18 +63,18 @@
                             PlaceholderColor="#ACACAC" />
                     </Frame>
                     <Frame Padding="0" IsClippedToBounds="True">
-                        <Entry
+                        <Picker
                             x:Name="TypeFurniture"
                             BackgroundColor="White"
-                            Placeholder="Тип мебели"
-                            PlaceholderColor="#ACACAC" />
+                            Title="Тип мебели"
+                            TitleColor="#ACACAC" />
                     </Frame>
                     <Frame Padding="0" IsClippedToBounds="True">
-                        <Entry
+                        <Picker
                             x:Name="MaterialFurniture"
                             BackgroundColor="White"
-                            Placeholder="Материал"
-                            PlaceholderColor="#ACACAC" />
+                            Title="Материал"
+                            TitleColor="#ACACAC" />
                     </Frame>
                 </StackLayout>
             </Frame>

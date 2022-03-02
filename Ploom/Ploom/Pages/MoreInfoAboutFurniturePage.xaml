@@ -114,7 +114,12 @@
                         TextColor="#888686" />
                     <RadioButton
                         x:Name="RBtn3"
-                        Content="Еще какой то материал"
+                        Content="Дерево"
+                        FontSize="14"
+                        TextColor="#888686" />
+                    <RadioButton
+                        x:Name="RBtn4"
+                        Content="Керамика"
                         FontSize="14"
                         TextColor="#888686" />
                 </StackLayout>

@@ -13,6 +13,9 @@ namespace Ploom
         public const string DB_NAME = "FurnitureStore.db";
         public static CRUDOperation db;
         public static Client client;
+        public static string[] colors = new string[4] { "Белый", "Фиолетовый", "Красный", "Желтый" };
+        public static string[] types = new string[4] { "Стул", "Стол", "Комод", "Шкаф" };
+        public static string[] materials = new string[4] { "Искусственная кожа", "Искусственный мех", "Дерево", "Керамика" };
         public static CRUDOperation Db
         {
             get

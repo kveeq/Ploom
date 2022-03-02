@@ -21,17 +21,21 @@ namespace Ploom.Pages
         {
             InitializeComponent();
             BarLbl.Text = "Добавление мебели";
+            TypeFurniture.ItemsSource = App.types;
+            MaterialFurniture.ItemsSource = App.materials;
             state = true;
         }
         public AddFurniturePage(Furniture fur)
         {
             furniture = fur;
             InitializeComponent();
+            TypeFurniture.ItemsSource = App.types;
+            MaterialFurniture.ItemsSource = App.materials;
             NameFurniture.Text = furniture.Name;
             DescriptionFurniture.Text = furniture.Description;
             PriceFurniture.Text = furniture.Price;
-            TypeFurniture.Text = furniture.Type;
-            MaterialFurniture.Text = furniture.Material;
+            TypeFurniture.SelectedItem = furniture.Type;
+            MaterialFurniture.SelectedItem = furniture.Material;
             BarLbl.Text = "Редактирование";
             state = false;
         }
@@ -61,10 +65,12 @@ namespace Ploom.Pages
         private async void SaveBtn_Clicked(object sender, EventArgs e)
         {
             if (state)
-                App.Db.SaveFurniture(new Furniture(NameFurniture.Text, DescriptionFurniture.Text, PriceFurniture.Text, "", TypeFurniture.Text, MaterialFurniture.Text, path));
+                App.Db.SaveFurniture(new Furniture(NameFurniture.Text, DescriptionFurniture.Text, PriceFurniture.Text, "", TypeFurniture.SelectedItem.ToString(), MaterialFurniture.SelectedItem.ToString(), path));
             else
             {
                 furniture.ImagePath = path;
+                furniture.Type = TypeFurniture.SelectedItem.ToString();
+                furniture.Material = MaterialFurniture.SelectedItem.ToString();
                 App.Db.SaveFurniture(furniture);
             }
             await Navigation.PopAsync();
