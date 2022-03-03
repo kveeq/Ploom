@@ -15,7 +15,7 @@
                     FontSize="43"
                     HorizontalOptions="Start"
                     Text="&#xe317;"
-                    TextColor="Black"
+                    TextColor="White"
                     VerticalOptions="Center">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer x:Name="BackLbl" Tapped="BackLbl_Tapped" />
@@ -27,7 +27,7 @@
                     FontSize="24"
                     HorizontalOptions="CenterAndExpand"
                     Text="Добавление мебели"
-                    TextColor="Black"
+                    TextColor="White"
                     VerticalOptions="CenterAndExpand" />
             </StackLayout>
             <Frame
