@@ -40,5 +40,7 @@ namespace Ploom.Models
         public string Password { get; set; }
 
         public int RoleId { get; set; }
+
+        public string AvatarPath { get; set; }
     }
 }

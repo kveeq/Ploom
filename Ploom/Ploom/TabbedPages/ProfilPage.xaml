@@ -15,11 +15,12 @@
                 TextColor="White" />
             <StackLayout Padding="40,20,0,40" Orientation="Horizontal">
                 <ImageButton
+                    x:Name="img"
                     Margin="0,0,20,0"
                     Aspect="AspectFill"
+                    Clicked="ImageButton_Clicked"
                     CornerRadius="50"
                     HeightRequest="90"
-                    Source="profiljpg"
                     WidthRequest="90" />
                 <Label
                     x:Name="AccountInfoLbl"

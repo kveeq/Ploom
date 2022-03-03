@@ -15,10 +15,17 @@ namespace Ploom.Pages
         public OfferFormPage()
         {
             InitializeComponent();
+            FIOLbl.Text = $"{App.client.Surname} {App.client.Name} {App.client.Patronymic}";
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
+            await Navigation.PopAsync();
+        }
+
+        private async void OfferBtn_Clicked(object sender, EventArgs e)
+        {
+            App.Db.SaveImprove(new Models.ImproveOffer(App.client.Id, TextOffer.Text));
             await Navigation.PopAsync();
         }
     }

@@ -36,6 +36,7 @@
                     Source="profiljpg.jpg"
                     WidthRequest="100" />
                 <Label
+                    x:Name="FIOLbl"
                     Margin="30"
                     Text="ФИО"
                     VerticalOptions="CenterAndExpand" />
@@ -46,14 +47,17 @@
                 CornerRadius="10"
                 HeightRequest="400">
                 <Editor
+                    x:Name="TextOffer"
                     BackgroundColor="White"
                     Placeholder="Напишите отзыв..."
                     PlaceholderColor="Gray" />
             </Frame>
 
             <Button
+                x:Name="OfferBtn"
                 Margin="10,0,30,20"
                 BackgroundColor="#F06B6D"
+                Clicked="OfferBtn_Clicked"
                 HorizontalOptions="EndAndExpand"
                 Text="Отправить" />
         </StackLayout>

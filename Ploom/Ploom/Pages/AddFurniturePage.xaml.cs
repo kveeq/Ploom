@@ -42,23 +42,55 @@ namespace Ploom.Pages
 
         private async void RegistrateBtn_Clicked(object sender, EventArgs e)
         {
-            try
+            string result = await DisplayActionSheet("Выберите:", null, null, "Фото из галереи", "Фото из камеры");
+
+            if (result == "Фото из галереи")
             {
-                // выбираем фото
-                var photo = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+                try
                 {
-                    Title = $"Xamarin.{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.png"
-                });
+                    // выбираем фото
+                    var photo = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+                    {
+                        Title = $"Xamarin.{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.png"
+                    });
 
-                var newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), photo.FileName);
+                    var newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), photo.FileName);
 
-                // загружаем в ImageView
+                    // загружаем в ImageView
 
-                path = photo.FullPath;
+                    path = photo.FullPath;
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+                try
+                {
+                    var photo = await MediaPicker.CapturePhotoAsync(new MediaPickerOptions
+                    {
+                        Title = $"xamarin.{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.png"
+                    });
+
+                    // для примера сохраняем файл в локальном хранилище
+                    var newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), photo.FileName);
+                    using (var stream = await photo.OpenReadAsync())
+                    using (var newStream = File.OpenWrite(newFile))
+                    {
+                        await stream.CopyToAsync(newStream);
+                    }
+
+                    //Debug.WriteLine($"Путь фото {photo.FullPath}");
+                    // загружаем в ImageView
+                    path = photo.FullPath;
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+                }
+
             }
         }
 

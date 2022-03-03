@@ -36,10 +36,64 @@
                     HeightRequest="100"
                     Source="profiljpg.jpg"
                     WidthRequest="100" />
-                <Label
-                    Margin="30"
-                    Text="ОБЩАЯ ОЦЕНКА"
-                    VerticalOptions="CenterAndExpand" />
+                <StackLayout>
+                    <Label
+                        Margin="30,30,0,0"
+                        Text="ОБЩАЯ ОЦЕНКА"
+                        VerticalOptions="CenterAndExpand" />
+                    <StackLayout Margin="30,0,0,0" Orientation="Horizontal">
+                        <Label
+                            x:Name="star1"
+                            FontFamily="MaterialIconsFont"
+                            FontSize="24"
+                            Text="star"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="star12" Tapped="star1_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            x:Name="star2"
+                            FontFamily="MaterialIconsFont"
+                            FontSize="24"
+                            Text="star"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="star22" Tapped="star2_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            x:Name="star3"
+                            FontFamily="MaterialIconsFont"
+                            FontSize="24"
+                            Text="star"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="star32" Tapped="star3_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            x:Name="star4"
+                            FontFamily="MaterialIconsFont"
+                            FontSize="24"
+                            Text="star"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="star42" Tapped="star4_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            x:Name="star5"
+                            FontFamily="MaterialIconsFont"
+                            FontSize="24"
+                            Text="star"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="star52" Tapped="star5_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
             <Frame
                 Margin="30"
@@ -47,14 +101,17 @@
                 CornerRadius="10"
                 HeightRequest="400">
                 <Editor
+                    x:Name="ReviewEntry"
                     BackgroundColor="White"
                     Placeholder="Напишите отзыв..."
                     PlaceholderColor="Gray" />
             </Frame>
 
             <Button
+                x:Name="SendBtn"
                 Margin="10,0,30,20"
                 BackgroundColor="#F06B6D"
+                Clicked="SendBtn_Clicked"
                 HorizontalOptions="EndAndExpand"
                 Text="Отправить" />
         </StackLayout>

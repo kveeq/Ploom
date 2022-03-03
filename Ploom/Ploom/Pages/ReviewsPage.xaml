@@ -13,6 +13,7 @@
             Orientation="Horizontal"
             VerticalOptions="StartAndExpand">
             <Label
+                x:Name=" fe"
                 Padding="10,20"
                 FontAttributes="None"
                 FontFamily="MaterialIconsFont"
@@ -35,32 +36,65 @@
             <ListView
                 x:Name="ReviewsLst"
                 HasUnevenRows="True"
+                IsPullToRefreshEnabled="True"
                 HorizontalOptions="StartAndExpand"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Padding="10">
-                                <Frame CornerRadius="20">
-                                    <StackLayout Orientation="Horizontal">
+                    <DataTemplate x:Name="qw1">
+                        <ViewCell x:Name="qw2">
+                            <StackLayout x:Name="qw3" Padding="10">
+                                <Frame x:Name="qw4" CornerRadius="20">
+                                    <StackLayout x:Name="qw5" Orientation="Horizontal">
                                         <Image
                                             HeightRequest="100"
                                             Source="profiljpg.jpg"
                                             WidthRequest="100" />
-                                        <StackLayout>
+                                        <StackLayout x:Name="qw6">
                                             <Label
                                                 FontSize="17"
-                                                Text="{Binding Name}"
+                                                Text="{Binding FIO}"
                                                 TextColor="#6D6D6D" />
                                             <Label
                                                 FontSize="15"
-                                                Text="{Binding Description}"
+                                                Text="{Binding ReviewText}"
                                                 TextColor="#9A9A9A" />
-                                            <Label
-                                                Margin="0,10"
-                                                FontSize="20"
-                                                Text="{Binding Price}"
-                                                TextColor="#D37C7E" />
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label
+                                                    x:Name="star1"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star1}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    x:Name="star2"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star2}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    x:Name="star3"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star3}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    x:Name="star4"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star4}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    x:Name="star5"
+                                                    FontFamily="MaterialIconsFont"
+                                                    FontSize="24"
+                                                    Text="star"
+                                                    TextColor="{Binding Star5}"
+                                                    VerticalOptions="CenterAndExpand" />
+                                            </StackLayout>
                                         </StackLayout>
                                     </StackLayout>
                                 </Frame>

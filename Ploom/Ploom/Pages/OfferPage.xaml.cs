@@ -15,8 +15,12 @@ namespace Ploom.Pages
         public OfferPage()
         {
             InitializeComponent();
-            FirnitureService.All();
-            SuggestionsLst.ItemsSource = FirnitureService.lst;
+            SuggestionsLst.RefreshCommand = new Command(() =>
+            {
+                SuggestionsLst.ItemsSource = App.Db.GetImproveOffers();
+                SuggestionsLst.IsRefreshing = false; //выключить анимацию обновления 
+            });
+            SuggestionsLst.ItemsSource = App.Db.GetImproveOffers();
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)

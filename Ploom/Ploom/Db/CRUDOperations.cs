@@ -18,6 +18,8 @@ namespace Ploom.Db
             db.CreateTable<Order>();
             db.CreateTable<Courier>();
             db.CreateTable<Delivery>();
+            db.CreateTable<Review>();
+            db.CreateTable<ImproveOffer>();
         }
         public IEnumerable<Furniture> GetFurnituress()
         {
@@ -34,6 +36,14 @@ namespace Ploom.Db
         public Furniture GetProjectItem(int id)
         {
             return db.Get<Furniture>(id);
+        }
+        public IEnumerable<Review> GetReviews()
+        {
+            return db.Table<Review>();
+        }
+        public IEnumerable<ImproveOffer> GetImproveOffers()
+        {
+            return db.Table<ImproveOffer>();
         }
 
         public int DeleteFurnitureInBusket(int id) { return db.Delete<Busket>(id); }
@@ -64,10 +74,42 @@ namespace Ploom.Db
                 return db.Insert(projectModel);
             }
         }
+        public int SaveReview(Review projectModel)
+        {
+            if (projectModel.Id != 0)
+            {
+                db.Update(projectModel);
+                return projectModel.Id;
+            }
+            else
+            {
+                return db.Insert(projectModel);
+            }
+        }
+        public int SaveImprove(ImproveOffer projectModel)
+        {
+            if (projectModel.Id != 0)
+            {
+                db.Update(projectModel);
+                return projectModel.Id;
+            }
+            else
+            {
+                return db.Insert(projectModel);
+            }
+        }
 
         public int SaveClient(Client projectModel)
         {
-            return db.Insert(projectModel);
+            if (projectModel.Id != 0)
+            {
+                db.Update(projectModel);
+                return projectModel.Id;
+            }
+            else
+            {
+                return db.Insert(projectModel);
+            }
         }
     }
 }
