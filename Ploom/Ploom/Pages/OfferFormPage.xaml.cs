@@ -25,7 +25,10 @@ namespace Ploom.Pages
 
         private async void OfferBtn_Clicked(object sender, EventArgs e)
         {
-            App.Db.SaveImprove(new Models.ImproveOffer(App.client.Id, TextOffer.Text));
+            if (AnonimCheck.IsChecked)
+                App.Db.SaveImprove(new Models.ImproveOffer(App.client.Id, TextOffer.Text));
+            else
+                App.Db.SaveImprove(new Models.ImproveOffer(App.client.Id, TextOffer.Text));
             await Navigation.PopAsync();
         }
     }

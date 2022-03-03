@@ -16,14 +16,20 @@ namespace Ploom.TabbedPages
         public SearchPage()
         {
             InitializeComponent();
-            GoodsFilterLstView.ItemsSource = App.Db.GetFurnituress();
+            Update();
+            GoodsFilterLstView.RefreshCommand = new Command(() =>
+            {
+                Update();
+                GoodsFilterLstView.IsRefreshing = false; //выключить анимацию обновления 
+            });
             //GoodsLstViw2.ItemsSource = FirnitureService.lst;
         }
 
-        //private void HomeBtn_Tapped(object sender, EventArgs e)
-        //{
-
-        //}
+        private void Update()
+        {
+            GoodsFilterLstView.ItemsSource = null;
+            GoodsFilterLstView.ItemsSource = App.Db.GetFurnituress();
+        }
 
         private void CleanAllBtnBoxViews()
         {

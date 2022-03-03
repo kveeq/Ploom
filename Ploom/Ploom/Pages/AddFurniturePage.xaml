@@ -65,15 +65,22 @@
                     <Frame Padding="0" IsClippedToBounds="True">
                         <Picker
                             x:Name="TypeFurniture"
-                            BackgroundColor="White"
                             Title="Тип мебели"
+                            BackgroundColor="White"
+                            TitleColor="#ACACAC" />
+                    </Frame>
+                    <Frame Padding="0" IsClippedToBounds="True">
+                        <Picker
+                            x:Name="ColorFurniture"
+                            Title="Цвет мебели"
+                            BackgroundColor="White"
                             TitleColor="#ACACAC" />
                     </Frame>
                     <Frame Padding="0" IsClippedToBounds="True">
                         <Picker
                             x:Name="MaterialFurniture"
-                            BackgroundColor="White"
                             Title="Материал"
+                            BackgroundColor="White"
                             TitleColor="#ACACAC" />
                     </Frame>
                 </StackLayout>

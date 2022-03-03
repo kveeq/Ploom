@@ -16,12 +16,14 @@ namespace Ploom.Pages
     {
         string path;
         bool state;
+        bool state1 = false;
         Furniture furniture;
         public AddFurniturePage()
         {
             InitializeComponent();
             BarLbl.Text = "Добавление мебели";
             TypeFurniture.ItemsSource = App.types;
+            ColorFurniture.ItemsSource = App.colors;
             MaterialFurniture.ItemsSource = App.materials;
             state = true;
         }
@@ -30,11 +32,13 @@ namespace Ploom.Pages
             furniture = fur;
             InitializeComponent();
             TypeFurniture.ItemsSource = App.types;
+            ColorFurniture.ItemsSource = App.colors;
             MaterialFurniture.ItemsSource = App.materials;
             NameFurniture.Text = furniture.Name;
             DescriptionFurniture.Text = furniture.Description;
             PriceFurniture.Text = furniture.Price;
             TypeFurniture.SelectedItem = furniture.Type;
+            ColorFurniture.SelectedItem = furniture.Color;
             MaterialFurniture.SelectedItem = furniture.Material;
             BarLbl.Text = "Редактирование";
             state = false;
@@ -42,6 +46,7 @@ namespace Ploom.Pages
 
         private async void RegistrateBtn_Clicked(object sender, EventArgs e)
         {
+
             string result = await DisplayActionSheet("Выберите:", null, null, "Фото из галереи", "Фото из камеры");
 
             if (result == "Фото из галереи")
@@ -59,6 +64,7 @@ namespace Ploom.Pages
                     // загружаем в ImageView
 
                     path = photo.FullPath;
+                    state1 = true;
                 }
                 catch (Exception ex)
                 {
@@ -85,6 +91,7 @@ namespace Ploom.Pages
                     //Debug.WriteLine($"Путь фото {photo.FullPath}");
                     // загружаем в ImageView
                     path = photo.FullPath;
+                    state1 = true;
                 }
                 catch (Exception ex)
                 {
@@ -97,11 +104,13 @@ namespace Ploom.Pages
         private async void SaveBtn_Clicked(object sender, EventArgs e)
         {
             if (state)
-                App.Db.SaveFurniture(new Furniture(NameFurniture.Text, DescriptionFurniture.Text, PriceFurniture.Text, "", TypeFurniture.SelectedItem.ToString(), MaterialFurniture.SelectedItem.ToString(), path));
+                App.Db.SaveFurniture(new Furniture(NameFurniture.Text, DescriptionFurniture.Text, PriceFurniture.Text, ColorFurniture.SelectedItem.ToString(), TypeFurniture.SelectedItem.ToString(), MaterialFurniture.SelectedItem.ToString(), path));
             else
             {
-                furniture.ImagePath = path;
+                if (state1)
+                    furniture.ImagePath = path;
                 furniture.Type = TypeFurniture.SelectedItem.ToString();
+                furniture.Color = ColorFurniture.SelectedItem.ToString();
                 furniture.Material = MaterialFurniture.SelectedItem.ToString();
                 App.Db.SaveFurniture(furniture);
             }

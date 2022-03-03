@@ -3,6 +3,7 @@
     x:Class="Ploom.Pages.ReviewsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     BackgroundColor="#F4F4FF"
     NavigationPage.HasNavigationBar="False"
     Visual="Material">
@@ -36,8 +37,8 @@
             <ListView
                 x:Name="ReviewsLst"
                 HasUnevenRows="True"
-                IsPullToRefreshEnabled="True"
                 HorizontalOptions="StartAndExpand"
+                IsPullToRefreshEnabled="True"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="qw1">
@@ -45,7 +46,7 @@
                             <StackLayout x:Name="qw3" Padding="10">
                                 <Frame x:Name="qw4" CornerRadius="20">
                                     <StackLayout x:Name="qw5" Orientation="Horizontal">
-                                        <Image
+                                        <ff:CachedImage
                                             HeightRequest="100"
                                             Source="profiljpg.jpg"
                                             WidthRequest="100" />

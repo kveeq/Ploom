@@ -18,6 +18,11 @@ namespace Ploom.Models
             Review = review;
         }
 
+        public ImproveOffer(string review)
+        {
+            Review = review;
+        }
+
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int Id { get; set; }
         public int ClientId { get; set; }

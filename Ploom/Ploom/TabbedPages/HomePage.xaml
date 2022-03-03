@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="Ploom.TabbedPages.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
     <StackLayout>
         <Frame Margin="0" Padding="0">
             <StackLayout>
@@ -113,7 +114,7 @@
                             <StackLayout Padding="10">
                                 <Frame CornerRadius="20">
                                     <StackLayout Orientation="Horizontal">
-                                        <Image
+                                        <ff:CachedImage
                                             HeightRequest="100"
                                             Source="{Binding ImagePath}"
                                             WidthRequest="100" />

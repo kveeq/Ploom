@@ -53,13 +53,22 @@
                     PlaceholderColor="Gray" />
             </Frame>
 
-            <Button
-                x:Name="OfferBtn"
-                Margin="10,0,30,20"
-                BackgroundColor="#F06B6D"
-                Clicked="OfferBtn_Clicked"
-                HorizontalOptions="EndAndExpand"
-                Text="Отправить" />
+            <StackLayout Margin="10,0,30,20" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="Start" Orientation="Horizontal">
+                    <CheckBox x:Name="AnonimCheck" />
+                    <Label
+                        FontSize="16"
+                        Text="Анонимно"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+                <Button
+                    x:Name="OfferBtn"
+                    Padding="10,5"
+                    BackgroundColor="#F06B6D"
+                    Clicked="OfferBtn_Clicked"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Отправить" />
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </ContentPage>

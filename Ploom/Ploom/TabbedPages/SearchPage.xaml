@@ -3,6 +3,7 @@
     x:Class="Ploom.TabbedPages.SearchPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     BackgroundColor="#F4F4FF">
     <StackLayout>
         <Frame
@@ -101,6 +102,7 @@
                 x:Name="GoodsFilterLstView"
                 HasUnevenRows="True"
                 HorizontalOptions="StartAndExpand"
+                IsPullToRefreshEnabled="True"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -108,7 +110,7 @@
                             <StackLayout Padding="10">
                                 <Frame CornerRadius="20">
                                     <StackLayout Orientation="Horizontal">
-                                        <Image
+                                        <ff:CachedImage
                                             HeightRequest="100"
                                             Source="{Binding ImagePath}"
                                             WidthRequest="100" />
